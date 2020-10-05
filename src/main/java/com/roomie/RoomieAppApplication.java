@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.*;
 
 @SpringBootApplication
 @Controller
@@ -21,10 +22,10 @@ public class RoomieAppApplication {
 		return "HomePage";
 	}
 
-	@GetMapping("/Registration")
-	public String registration(){
-		return "Registration";
-	}
+//	@GetMapping("/Registration")
+//	public String registration(){
+//		return "Registration";
+//	}
 
 	@GetMapping("/LogIn")
 	public String logIn(){
@@ -36,10 +37,10 @@ public class RoomieAppApplication {
 		return "PotentialMatches";
 	}
 
-	@GetMapping("/SearchByLocation")
-	public String searchLocation(){
-		return "SearchLocation";
-	}
+//	@GetMapping("/SearchByLocation")
+//	public String searchLocation(){
+//		return "SearchLocation";
+//	}
 
 	@GetMapping("/SearchNewMembers")
 	public String searchNewMembers(){

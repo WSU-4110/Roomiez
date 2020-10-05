@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="https://thymeleaf.org">
 <head>
     <title>Roomiez :: Searching by Location</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
@@ -38,16 +38,14 @@
     <br>
 
     <h3>Enter Radius to Search in Miles:
-        <form action="/radius">
-        <label for="radius"></label>
-            <input type="text" id="radius" name="radius">
-            <input type="submit" value="Submit">
+        <form action="#" th:action="@{/SearchByLocation}" th:object="${radius}" method="post" >
+       <p>Radius: <input type="text" th:field="*{radius}" /></p>
+       <p><input type="submit" value="Submit" /></p>
         </form>
 
     </h3>
 
-    <h3>Search results for users that are {miles} miles from your location </h3>
-
+    <h3>Search results for users that are <p th:text="${radius.radius}" /> miles from your location </h3>
 
 
 

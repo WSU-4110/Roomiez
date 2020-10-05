@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
     <title>Roomiez :: Registration</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
@@ -34,15 +34,16 @@
     <div class="row">
         <div class="column">
             <br>
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" placeholder="Enter Username" required><br>
+            <form action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
+            <label>Username:</label><br>
+            <input type="text" th:field="*{username}"  placeholder="Enter Username" required><br>
             <br>
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email" placeholder="Enter Email Address" required>
+            <label>E-mail:</label><br>
+            <input type="email" th:field="*{email}" name="email" placeholder="Enter Email Address" required>
             <br>
             <br>
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" placeholder="Enter a Password" required>
+            <label>Password:</label><br>
+            <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
 
         </div>
         <div class="column">
@@ -67,7 +68,7 @@
     <div class="alignbutton">
         <input type="submit" class="regbutton" id="signupbutton" value="Create an Account" align="center">
     </div>
-
+    </form>
 
         <h2><a href="/LogIn">Already have an account? Log in!</a></h2>
 
