@@ -214,3 +214,7 @@ li a:hover:not(.active) {
   background-color: saddlebrown;
   color: white;
 }
+
+.locationinline{
+  display: inline-block;
+}
