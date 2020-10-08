@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://thymeleaf.org">
 <head>
     <title>Roomiez :: Log In</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
@@ -29,16 +29,19 @@
 
 <div class="registrationcontainer">
 
-    <h1>LOG IN</h1>
+    <h1>LOG IN TO FIND YOUR POTENTIAL ROOMIEZ</h1>
+    <br>
+    <br>
+    <div class="registrationcontainer">
 
-    <div>
-
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" placeholder="Enter username" required><br>
+        <form action="#" th:action="@{/LogIn}" th:object= "${login}" method="post">
+        <label>Username:</label><br>
+            <input type="text" th:field="*{username}"  placeholder="Enter Username" required><br>
         <br>
-
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" placeholder="Enter First Name" required>
+        <br>
+        <label>Password:</label><br>
+            <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
+        <br>
         <br>
         <br>
         <br>

@@ -27,10 +27,10 @@ public class RoomieAppApplication {
 //		return "Registration";
 //	}
 
-	@GetMapping("/LogIn")
-	public String logIn(){
-		return "LogIn";
-	}
+//	@GetMapping("/LogIn")
+//	public String logIn(){
+//		return "LogIn";
+//	}
 
 	@GetMapping("/RoomiezMatches")
 	public String potentialMatches(){

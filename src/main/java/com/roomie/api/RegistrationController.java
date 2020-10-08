@@ -1,6 +1,6 @@
 package com.roomie.api;
 
-import com.roomie.model.Radius;
+
 import com.roomie.model.Registration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
