@@ -42,10 +42,10 @@ public class RoomieAppApplication {
 //		return "SearchLocation";
 //	}
 
-	@GetMapping("/SearchNewMembers")
-	public String searchNewMembers(){
-		return "SearchNewMember";
-	}
+//	@GetMapping("/SearchNewMembers")
+//	public String searchNewMembers(){
+//		return "SearchNewMember";
+//	}
 
 	@GetMapping("/SearchOnline")
 	public String searchOnline(){

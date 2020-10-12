@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http:thymeleaf.org">
 <head>
     <title>Roomiez :: Searching by Newest Members</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
@@ -37,7 +37,26 @@
     <br>
     <br>
 
-    <h3>Search results for users that joined in the past seven days </h3>
+    <div class="locationinline">
+        <h3>Enter Days to Search: </div>
+    <div class="locationinline">
+        <form action="#" th:action="@{/SearchNewMembers}" th:object="${newMemberDays}" method="post" >
+            <p> <input type="text" th:field="*{newMemberDays}" /></p> </div>
+    <div class="locationinline">
+        <p><input type="submit" value="Submit" /></p></div>
+    </form>
+
+    </h3>
+
+
+    <br>
+    <br>
+    <div class="locationinline"> <h3>Search results for users that created an account no more than  </h3> </div>
+
+    <div class="locationinline"> <h3> <p th:text="${newMemberDays.newMemberDays}" /> </h3></div>
+
+    <div class="locationinline"><h3> days ago. </h3> </div>
+
 
 
 
