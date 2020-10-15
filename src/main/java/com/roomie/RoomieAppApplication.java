@@ -4,10 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.support.*;
 
 @SpringBootApplication
 @Controller
@@ -32,10 +29,10 @@ public class RoomieAppApplication {
 //		return "LogIn";
 //	}
 
-	@GetMapping("/RoomiezMatches")
-	public String potentialMatches(){
-		return "PotentialMatches";
-	}
+//	@GetMapping("/PotentialMatches")
+//	public String potentialMatches(){
+//		return "PotentialMatches";
+//	}
 
 //	@GetMapping("/SearchByLocation")
 //	public String searchLocation(){
@@ -59,13 +56,13 @@ public class RoomieAppApplication {
 
 	@GetMapping("/UserProfile")
 	public String userProfile(){
-		return "UserProfile";
+		return "UpdateUserProfile";
 	}
 
-	@GetMapping("/UserHomePage")
-	public String userHomePage(){
-		return "UserHomePage";
-	}
+//	@GetMapping("/UserHomePage")
+//	public String userHomePage(){
+//		return "UserHomePage";
+//	}
 
 
 

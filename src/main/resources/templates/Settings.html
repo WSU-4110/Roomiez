@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Roomiez :: Welcome Home </title>
+    <title>Roomiez :: Searching by Online</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
 
 </head>
@@ -23,20 +22,17 @@
 <body>
 <hr>
 <ul>
+    <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
     <li><a href="/UpdateUserProfile">Edit Profile</a></li>
     <li><a href="/PotentialMatches">Search for Matches</a></li>
     <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
-    <li><a href="/Settings">Settings</a></li>
     <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
 </ul>
 
 
-
 <div class="registrationcontainer">
 
-    <h1>Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
-    <h2>Find Your Roomie Today!</h2>
-
+    SETTINGS PAGE
 
 
 </div>

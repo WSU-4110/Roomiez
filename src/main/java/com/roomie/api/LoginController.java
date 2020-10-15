@@ -14,13 +14,13 @@ public class LoginController {
     @GetMapping("/LogIn")
     public String addRadiusSubmit(Model model){
         model.addAttribute("login", new Login());
-        return "Login";
+        return "LogIn";
     }
 
     @PostMapping("/LogIn")
     public String addRadiusForm(@ModelAttribute Login login, Model model){
         model.addAttribute("login", login);
-        return "ShowLogin";
+        return "UserHomePage";
     }
 
 }

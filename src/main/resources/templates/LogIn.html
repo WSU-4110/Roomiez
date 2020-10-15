@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Roomiez :: Log In</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
@@ -34,13 +35,20 @@
     <br>
     <div class="registrationcontainer">
 
-        <form action="#" th:action="@{/LogIn}" th:object= "${login}" method="post">
+        <div th:if="${param.error}">
+           <h2> Invalid username and password. Please try again.</h2>
+        </div>
+        <div th:if="${param.logout}">
+            <h2>You have been logged out. See you soon!</h2>
+        </div>
+        <br>
+        <form th:action="@{/LogIn}"  method="post">
         <label>Username:</label><br>
-            <input type="text" th:field="*{username}"  placeholder="Enter Username" required><br>
+            <input type="text" name="username"  placeholder="Enter Username" required><br>
         <br>
         <br>
         <label>Password:</label><br>
-            <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
+            <input type="password"  name="password" placeholder="Enter a Password" required>
         <br>
         <br>
         <br>
