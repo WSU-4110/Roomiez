@@ -1,7 +1,7 @@
 # Roomiez
 
 ## A website to connect people looking for a roommate!
-### Installation Instgiructions
+### Installation Instructions
 #### Requirements
 ```
 1) Install InteliJ IDEA - Ultimate
