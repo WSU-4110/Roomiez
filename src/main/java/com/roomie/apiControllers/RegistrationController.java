@@ -1,4 +1,4 @@
-package com.roomie.api;
+package com.roomie.apiControllers;
 
 
 import com.roomie.model.Registration;

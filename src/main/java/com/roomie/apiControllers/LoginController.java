@@ -1,7 +1,6 @@
-package com.roomie.api;
+package com.roomie.apiControllers;
 
 import com.roomie.model.Login;
-import com.roomie.model.Radius;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

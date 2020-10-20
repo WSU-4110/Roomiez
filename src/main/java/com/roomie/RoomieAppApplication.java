@@ -44,20 +44,20 @@ public class RoomieAppApplication {
 //		return "SearchNewMember";
 //	}
 
-	@GetMapping("/SearchOnline")
-	public String searchOnline(){
-		return "SearchOnline";
-	}
+//	@GetMapping("/SearchOnline")
+//	public String searchOnline(){
+//		return "SearchOnline";
+//	}
 
-	@GetMapping("/SearchRecommended")
-	public String searchRecommended(){
-		return "SearchRecommended";
-	}
-
-	@GetMapping("/UserProfile")
-	public String userProfile(){
-		return "UpdateUserProfile";
-	}
+//	@GetMapping("/SearchRecommended")
+//	public String searchRecommended(){
+//		return "SearchRecommended";
+////	}
+//
+//	@GetMapping("/UserProfile")
+//	public String userProfile(){
+//		return "UpdateUserProfile";
+//	}
 
 //	@GetMapping("/UserHomePage")
 //	public String userHomePage(){
