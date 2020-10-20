@@ -1,4 +1,4 @@
-# Roomiez
+# Roomiez App
 
 ## A website to connect people looking for a roommate!
 ### Installation Instructions
