@@ -22,10 +22,11 @@
 <body>
 <hr>
 <ul>
-    <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
-    <li><a href="/UpdateUserProfile">Edit Profile</a></li>
-    <li><a href="/PotentialMatches">Search for Matches</a></li>
-    <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
+    <li><a href="/templates/UserHomePage.html">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li><a href="/templates/UpdateUserProfile.html">Edit Profile</a></li>
+    <li><a href="/templates/PotentialMatches.html">Search for Matches</a></li>
+    <li><a href="/templates/ChatHomePage.html">Chat with Roomiez</a></li>
+
     <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
 </ul>
 
