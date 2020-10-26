@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Roomiez :: Home Tour</title>
-    <link rel="stylesheet" href="/Images/stylesheet/style.css">
+    <link rel="stylesheet" href="../Images/stylesheet/style.css">
 </head>
 
 <!--../static.Images/images/stylesheet/style.css-->
@@ -11,31 +11,39 @@
 <div class="header">
 
 
-    `<img class="roomiez" src="/Images/images/Roomiez.png"/>
+    `<a href="/home"><img class="roomiez" src="../Images/images/Roomiez.png" alt="Roomiez Logo picture"/></a>
 
-<div class="links">
-    <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
+    <div class="links">
+        <a href="https://www.facebook.com"><img class="facebook" src="../Images/images/facebook.png"
+                                                alt="Facebook Logo picture"/></a>
 
-    <a href="https://www.twitter.com"><img class="twitter" src="/Images/images/twitter.png"/></a>
+        <a href="https://www.twitter.com"><img class="twitter" src="../Images/images/twitter.png"
+                                               alt="Twitter Logo picture"/></a>
 
-    <a href="https://www.instagram.com"><img class="insta" src="/Images/images/insta.jpeg"/></a>
+        <a href="https://www.instagram.com"><img class="insta" src="../Images/images/insta.jpeg"
+                                                 alt="Instagram Logo picture"/></a>
 
-     <!--../static/Images/images/facebook.png-->
+        <!--../static/Images/images/facebook.png-->
 
     </div>
 </div>
+
+<body>
+<hr>
 
 <ul>
-    <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li><a href="/templates/UserHomePage.html">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li style="float:right">
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"></form>
+    </li>
 </ul>
 
-<div class="mainpagecontainer">
 
-    <div class="homeh1">
-        <h1>Find your Roomiez Home Tour Video here!</h1>
-    </div>
-
+<div class="homeh1">
+    <h1>Find your Roomiez Home Tour Video here!</h1>
 </div>
 
-    </body>
+
+</body>
 </html>
