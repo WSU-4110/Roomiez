@@ -32,9 +32,9 @@
 
 
     <div class="row">
-        < class="column">
+        <div class="column">
             <br>
-            <form action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
+            <div action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
             <label>Username:</label><br>
                 <label>
                     <input type="text" th:field="*{username}"  placeholder="Enter Username" required>
@@ -50,8 +50,9 @@
                 <label>
                     <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
                 </label>
+            </div>
 
-            </form>
+        </div>
         <div class="column">
             <br>
             <label>
