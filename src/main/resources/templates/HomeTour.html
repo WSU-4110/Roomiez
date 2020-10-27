@@ -1,10 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Roomiez :: Home Tour</title>
+    <link rel="stylesheet" href="../Images/stylesheet/style.css">
 </head>
+
+<div class="header">
+
+
+    `<a href="/home"><img class="roomiez" src="../Images/images/Roomiez.png" alt="Roomiez Logo picture"/></a>
+
+    <div class="links">
+        <a href="https://www.facebook.com"><img class="facebook" src="../Images/images/facebook.png"
+                                                alt="Facebook Logo picture"/></a>
+
+        <a href="https://www.twitter.com"><img class="twitter" src="../Images/images/twitter.png"
+                                               alt="Twitter Logo picture"/></a>
+
+        <a href="https://www.instagram.com"><img class="insta" src="../Images/images/insta.jpeg"
+                                                 alt="Instagram Logo picture"/></a>
+
+    </div>
+</div>
+
 <body>
+<hr>
+
+<ul>
+    <li><a href="/templates/UserHomePage.html">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li style="float:right">
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"></form>
+    </li>
+</ul>
+
+
+<div class="homeh1">
+    <h1>Find your Roomiez Home Tour Video here!</h1>
+</div>
+
 
 </body>
 </html>

@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Roomiez :: Searching by Online</title>
-    <link rel="stylesheet" href="/Images/stylesheet/style.css">
-
+    <link rel="stylesheet" href="../Images/stylesheet/style.css">
 </head>
 
 <div class="header">
 
-    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
+
+    `<a href="/home"><img class="roomiez" src="../Images/images/Roomiez.png" alt="Roomiez Logo picture"/></a>
 
     <div class="links">
-        <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
-        <a href="https://www.twitter.com"><img class="twitter" src="/Images/images/twitter.png"/></a>
-        <a href="https://www.instagram.com"><img class="insta" src="/Images/images/insta.jpeg"/></a>
+        <a href="https://www.facebook.com"><img class="facebook" src="../Images/images/facebook.png"
+                                                alt="Facebook Logo picture"/></a>
+
+        <a href="https://www.twitter.com"><img class="twitter" src="../Images/images/twitter.png"
+                                               alt="Twitter Logo picture"/></a>
+
+        <a href="https://www.instagram.com"><img class="insta" src="../Images/images/insta.jpeg"
+                                                 alt="Instagram Logo picture"/></a>
 
     </div>
 </div>
@@ -22,11 +27,14 @@
 <body>
 <hr>
 <ul>
-    <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
-    <li><a href="/UpdateUserProfile">Edit Profile</a></li>
-    <li><a href="/PotentialMatches">Search for Matches</a></li>
-    <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
-    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
+    <li><a href="/templates/UserHomePage.html">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li><a href="/templates/UpdateUserProfile.html">Edit Profile</a></li>
+    <li><a href="/templates/PotentialMatches.html">Search for Matches</a></li>
+    <li><a href="/templates/ChatHomePage.html">Chat with Roomiez</a></li>
+
+    <li style="float:right"><form th:action="@{/logout}" method="post">
+        <input type="submit" value="Log Out"></form>
+    </li>
 </ul>
 
 

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="http://thymeleaf.org">
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Roomiez :: Registration</title>
-    <link rel="stylesheet" href="/Images/stylesheet/style.css">
-
+    <link rel="stylesheet" href="../Images/stylesheet/style.css">
 </head>
 
 <div class="header">
 
 
-    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
+    `<a href="/home"><img class="roomiez" src="../Images/images/Roomiez.png" alt="Roomiez Logo picture"/></a>
 
     <div class="links">
-        <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
+        <a href="https://www.facebook.com"><img class="facebook" src="../Images/images/facebook.png"
+                                                alt="Facebook Logo picture"/></a>
 
-        <a href="https://www.twitter.com"><img class="twitter" src="/Images/images/twitter.png"/></a>
+        <a href="https://www.twitter.com"><img class="twitter" src="../Images/images/twitter.png"
+                                               alt="Twitter Logo picture"/></a>
 
-        <a href="https://www.instagram.com"><img class="insta" src="/Images/images/insta.jpeg"/></a>
-
-
+        <a href="https://www.instagram.com"><img class="insta" src="../Images/images/insta.jpeg"
+                                                 alt="Instagram Logo picture"/></a>
 
     </div>
 </div>
@@ -34,23 +34,36 @@
     <div class="row">
         <div class="column">
             <br>
-            <form action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
+            <div action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
             <label>Username:</label><br>
-            <input type="text" th:field="*{username}"  placeholder="Enter Username" required><br>
+                <label>
+                    <input type="text" th:field="*{username}"  placeholder="Enter Username" required>
+                </label><br>
             <br>
             <label>E-mail:</label><br>
-            <input type="email" th:field="*{email}" name="email" placeholder="Enter Email Address" required>
-            <br>
+                <label>
+                    <input type="email" th:field="*{email}" name="email" placeholder="Enter Email Address" required>
+                </label>
+                <br>
             <br>
             <label>Password:</label><br>
-            <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
+                <label>
+                    <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
+                </label>
+            </div>
 
         </div>
         <div class="column">
             <br>
-            <input type="radio" name="gender" value="male">Male
-            <input type="radio" name="gender" value="female">Female
-            <input type="radio" name="gender" value="other">Prefer not to say
+            <label>
+                <input type="radio" name="gender" value="male">
+            </label>Male
+            <label>
+                <input type="radio" name="gender" value="female">
+            </label>Female
+            <label>
+                <input type="radio" name="gender" value="other">
+            </label>Prefer not to say
             <br>
             <br>
             <br>
@@ -66,9 +79,9 @@
     <br>
     <br>
     <div class="alignbutton">
-        <input type="submit" class="regbutton" id="signupbutton" value="Create an Account" align="center">
+        <input type="submit" class="regbutton" id="signupbutton" value="Create an Account">
+
     </div>
-    </form>
 
         <h2>Click <a th:href="@{/UserHomePage}">here</a> to log in.</h2>
 

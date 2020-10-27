@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html xmlns:th="https://thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <title>Roomiez :: Searching by Location</title>
-    <link rel="stylesheet" href="/Images/stylesheet/style.css">
-
+    <link rel="stylesheet" href="../Images/stylesheet/style.css">
 </head>
 
 <div class="header">
 
-    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
+
+    `<a href="/home"><img class="roomiez" src="../Images/images/Roomiez.png" alt="Roomiez Logo picture"/></a>
 
     <div class="links">
-        <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
-        <a href="https://www.twitter.com"><img class="twitter" src="/Images/images/twitter.png"/></a>
-        <a href="https://www.instagram.com"><img class="insta" src="/Images/images/insta.jpeg"/></a>
+        <a href="https://www.facebook.com"><img class="facebook" src="../Images/images/facebook.png"
+                                                alt="Facebook Logo picture"/></a>
+
+        <a href="https://www.twitter.com"><img class="twitter" src="../Images/images/twitter.png"
+                                               alt="Twitter Logo picture"/></a>
+
+        <a href="https://www.instagram.com"><img class="insta" src="../Images/images/insta.jpeg"
+                                                 alt="Instagram Logo picture"/></a>
 
     </div>
 </div>
@@ -22,11 +27,11 @@
 <body>
 <hr>
 <ul>
-    <li><a href="/UserHomePage"> Home Page</a></li>
-    <li><a href="/SearchByLocation">Search by Location</a></li>
-    <li><a href="/SearchNewMembers">Search by New Members</a></li>
-    <li><a href="/SearchOnline">Search by Online Members</a></li>
-    <li><a href="/SearchRecommended">Search by Recommended Users</a></li>
+    <li><a href="/templates/UserHomePage.html"> Home Page</a></li>
+    <li><a href="/templates/SearchLocation.html">Search by Location</a></li>
+    <li><a href="/templates/SearchNewMember.html">Search by New Members</a></li>
+    <li><a href="/templates/SearchOnline.html">Search by Online Members</a></li>
+    <li><a href="/templates/SearchRecommended.html">Search by Recommended Users</a></li>
 
 </ul>
 
@@ -38,27 +43,29 @@
     <br>
     <br>
 
-    <div class="locationinline">
-    <h3>Enter Radius to Search in Miles: </div>
-    <div class="locationinline">
-        <form action="#" th:action="@{/SearchByLocation}" th:object="${radius}" method="post" >
-       <p> <input type="text" th:field="*{radius}" /></p> </div>
-    <div class="locationinline">
-       <p><input type="submit" value="Submit" /></p></div>
-        </form>
-
-    </h3>
+    < class="locationinline">
+    <h3>Enter Radius to Search in Miles: </h3>>
+    < class="locationinline">
+    <form action="#" th:action="@{/SearchByLocation}" th:object="${radius}" method="post">
+        <p>
+            <label>
+                <input type="text" th:field="*{radius}"/>
+            </label>
+        </p>
+        <div class="locationinline">
+            <p><input type="submit" value="Submit"/></p></div>
+    </form>
 
 
     <br>
     <br>
-    <div class="locationinline"> <h3>Search results for users that are</h3> </div>
+    <div class="locationinline"><h3>Search results for users that are</h3></div>
 
-    <div class="locationinline"> <h3> <p th:text="${radius.radius}" /> </h3></div>
+    <div class="locationinline">
+        <h3><p th:text="${radius.radius}"></p></h3>
+    </div>
 
-    <div class="locationinline"><h3> miles from your location </h3> </div>
-
-
+    <div class="locationinline"><h3> miles from your location </h3></div>
 
 
 </div>
