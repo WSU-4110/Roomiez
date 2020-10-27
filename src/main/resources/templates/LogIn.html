@@ -33,7 +33,7 @@
     <h1>LOG IN TO FIND YOUR POTENTIAL ROOMIEZ</h1>
     <br>
     <br>
-    <div class="registrationcontainer">
+    <div class="loginbox">
 
         <div th:if="${param.error}">
            <h2> Invalid username and password. Please try again.</h2>
@@ -44,11 +44,15 @@
         <br>
         <form th:action="@{/LogIn}"  method="post">
         <label>Username:</label><br>
-            <input type="text" name="username"  placeholder="Enter Username" required><br>
+            <div class="logintext">
+                <input type="text" name="username"  placeholder="Enter Username" required><br>
+            </div>
         <br>
         <br>
         <label>Password:</label><br>
-            <input type="password"  name="password" placeholder="Enter a Password" required>
+            <div class="logintext">
+                <input type="password"  name="password" placeholder="Enter a Password" required>
+            </div>
         <br>
         <br>
         <br>

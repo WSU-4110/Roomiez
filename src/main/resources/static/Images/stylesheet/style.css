@@ -160,6 +160,40 @@ a:active {
   margin-bottom: auto;
   padding-top: 10px;
   text-align: center;
+
+}
+
+.loginbox{
+  width:280px;
+  position:absolute;
+  font-size:20px;
+  top:35%;
+  left:40%;
+  color:#5e97d4;
+}
+
+.logintext{
+  width:100%;
+  overflow:hidden;
+  font-size:20px;
+  padding:8px 0;
+  margin:8px 0;
+  border-bottom: 1px solid #5e97d4;
+}
+.logintext i{
+  width:26px;
+  float:left;
+  text-align:center;
+}
+.logintext input{
+  border:none;
+  outline: none;
+  background: none;
+  color: #5e97d4;
+  font-size: 18px;
+  width: 80%;
+  float: left;
+  margin: 10px;
 }
 
 
@@ -227,4 +261,11 @@ li a:hover:not(.active) {
 
 .locationinline{
   display: inline-block;
+}
+
+.q-column{
+  float: left;
+  width: 50%;
+  padding: 10px;
+  text-align: left;
 }
