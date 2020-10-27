@@ -43,27 +43,29 @@
     <br>
     <br>
 
-    <div class="locationinline">
-    <h3>Enter Radius to Search in Miles: </div>
-    <div class="locationinline">
-        <form action="#" th:action="@{/SearchByLocation}" th:object="${radius}" method="post" >
-       <p> <input type="text" th:field="*{radius}" /></p> </div>
-    <div class="locationinline">
-       <p><input type="submit" value="Submit" /></p></div>
-        </form>
-
-    </h3>
+    < class="locationinline">
+    <h3>Enter Radius to Search in Miles: </h3>>
+    < class="locationinline">
+    <form action="#" th:action="@{/SearchByLocation}" th:object="${radius}" method="post">
+        <p>
+            <label>
+                <input type="text" th:field="*{radius}"/>
+            </label>
+        </p>
+        <div class="locationinline">
+            <p><input type="submit" value="Submit"/></p></div>
+    </form>
 
 
     <br>
     <br>
-    <div class="locationinline"> <h3>Search results for users that are</h3> </div>
+    <div class="locationinline"><h3>Search results for users that are</h3></div>
 
-    <div class="locationinline"> <h3> <p th:text="${radius.radius}" /> </h3></div>
+    <div class="locationinline">
+        <h3><p th:text="${radius.radius}"/></h3>
+    </div>
 
-    <div class="locationinline"><h3> miles from your location </h3> </div>
-
-
+    <div class="locationinline"><h3> miles from your location </h3></div>
 
 
 </div>
