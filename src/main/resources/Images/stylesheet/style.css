@@ -5,9 +5,10 @@
 
 .homeh1{
     margin-bottom: 0;
-    font: 100px;
+    font-size: 100px;
     font-family: Rockwell;
-    font: bold;
+    font-weight: bold;
+    font-family: bold;
     color: black;
     text-align: center;
     padding-top: 50px;
@@ -15,9 +16,10 @@
 
 h1{
     margin-bottom: 0;
-    font: 100px;
+    font-size: 100px;
     font-family: Rockwell;
-    font: bold;
+    font-weight: bold;
+    font-family: bold;
     color: black;
     text-align: center;
     padding-top: 50px;
@@ -199,7 +201,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: white;
-    font: "American Typewriter";
+    font-family: "American Typewriter";
     font-size: large;
 }
 
