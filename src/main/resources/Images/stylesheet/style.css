@@ -3,7 +3,7 @@
 }
 
 
-.homeh1{
+.homeh1 {
     margin-bottom: 0;
     font-size: 100px;
     font-family: Rockwell;
@@ -14,7 +14,7 @@
     padding-top: 50px;
 }
 
-h1{
+h1 {
     margin-bottom: 0;
     font-size: 100px;
     font-family: Rockwell;
@@ -25,7 +25,7 @@ h1{
     padding-top: 50px;
 }
 
-h2{
+h2 {
     margin-bottom: 0;
     font: 20px "American Typewriter";
     color: black;
@@ -35,10 +35,7 @@ h2{
 
 .button {
     background-color: #ffff7d;
-    border: none;
-    color: black;
-    border-style: solid;
-    border-color: black;
+    border: solid black;
     border-radius: 25px;
     padding: 15px 32px;
     text-decoration: none;
@@ -50,7 +47,6 @@ h2{
 
 .regbutton {
     background-color: lightgrey;
-    border: none;
     color: black;
     border-style: solid;
     border-color: black;
@@ -63,18 +59,18 @@ h2{
     font-weight: bold;
 }
 
-.alignbutton{
+.alignbutton {
     text-align: center;
 }
 
-img.roomiez{
+img.roomiez {
     width: 200px;
     height: 50px;
     text-align: left;
     vertical-align: middle;
 }
 
-.facebook, .twitter, .insta{
+.facebook, .twitter, .insta {
     width: 70px;
     height: 50px;
     text-align: right;
@@ -83,7 +79,7 @@ img.roomiez{
     vertical-align: middle;
 }
 
-.chatlogo{
+.chatlogo {
     width: 600px;
     height: 120px;
     text-align: left;
@@ -92,7 +88,7 @@ img.roomiez{
     margin-left: 10px;
 }
 
-.searchbuttons{
+.searchbuttons {
     width: 300px;
     height: 250px;
     text-align: left;
@@ -102,7 +98,7 @@ img.roomiez{
     margin-left: 10px;
 }
 
-.searchbuttons1{
+.searchbuttons1 {
     width: 300px;
     height: 290px;
     text-align: left;
@@ -112,7 +108,7 @@ img.roomiez{
     margin-left: 10px;
 }
 
-.header{
+.header {
     width: 100%;
     height: 50px;
     display: block;
@@ -121,8 +117,7 @@ img.roomiez{
 }
 
 
-
-.links{
+.links {
     float: right;
 }
 
@@ -181,7 +176,7 @@ a:active {
     clear: both;
 }
 
-.logininfo{
+.logininfo {
     float: left;
     width: 50%;
     padding: 10px;
@@ -190,7 +185,7 @@ a:active {
 }
 
 
-.formtextbox{
+.formtextbox {
     border: none;
 }
 
@@ -227,6 +222,6 @@ li a:hover:not(.active) {
     color: white;
 }
 
-.locationinline{
+.locationinline {
     display: inline-block;
 }
