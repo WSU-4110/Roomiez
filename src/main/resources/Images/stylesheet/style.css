@@ -3,7 +3,7 @@
 }
 
 
-.homeh1 {
+.homeh1{
     margin-bottom: 0;
     font-size: 100px;
     font-weight: bold;
@@ -13,13 +13,9 @@
     padding-top: 50px;
 }
 
-.homeh1 {
-    font-family: Rockwell, serif;
-}
-
-h1 {
+h1{
     margin-bottom: 0;
-    font-size: 100px;
+    font-size: 32px;
     font-weight: bold;
     font-family: bold, serif;
     color: black;
