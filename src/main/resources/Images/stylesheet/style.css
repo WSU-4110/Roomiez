@@ -6,7 +6,20 @@
 .homeh1 {
     margin-bottom: 0;
     font-size: 100px;
+    font-weight: bold;
+    font-family: bold, serif;
+    color: black;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.homeh1 {
     font-family: Rockwell, serif;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-size: 100px;
     font-weight: bold;
     font-family: bold, serif;
     color: black;
@@ -15,14 +28,7 @@
 }
 
 h1 {
-    margin-bottom: 0;
-    font-size: 100px;
     font-family: Rockwell, serif;
-    font-weight: bold;
-    font-family: bold, serif;
-    color: black;
-    text-align: center;
-    padding-top: 50px;
 }
 
 h2 {
