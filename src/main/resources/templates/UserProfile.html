@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <title>Roomiez :: Welcome Home </title>
+    <link rel="stylesheet" href="/Images/stylesheet/style.css">
+
+</head>
+
+<div class="header">
+
+    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
+
+    <div class="links">
+        <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
+        <a href="https://www.twitter.com"><img class="twitter" src="/Images/images/twitter.png"/></a>
+        <a href="https://www.instagram.com"><img class="insta" src="/Images/images/insta.jpeg"/></a>
+
+    </div>
+</div>
+
+
+<body>
+<hr>
+<ul>
+    <li><a href="/UpdateUserProfile">Edit Profile</a></li>
+    <li><a href="/PotentialMatches">Search for Matches</a></li>
+    <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
+    <li><a href="/Settings">Settings</a></li>
+    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></form></li>
+</ul>
+
+
+
+<div class="registrationcontainer">
+
+    <h2>[[${#httpServletRequest.remoteUser}]]'s Preferences</h2>
+
+    <div class="row">
+        <div class="column">
+            <p th:text="'What Describes you: ' + ${updateSurvey.whatDescribesYou}" />
+            <br>
+            <p th:text="'Do you prefer your roommate to be extroverted or introverted?: ' + ${updateSurvey.extrovertedOrIntroverted}" />
+            <br>
+            <p th:text="'How often do you invite friends over?: ' + ${updateSurvey.inviteFriendsOver}" />
+            <br>
+            <p th:text="'What are your cleaning habits?: ' + ${updateSurvey.cleaningHabits}" />
+            <br>
+            <p th:text="'Do you smoke?: ' + ${updateSurvey.doYouSmoke}" />
+            <br>
+            <p th:text="'Do you care if your roommate smokes?: ' + ${updateSurvey.doesRoommateSmoke}" />
+            <br>
+            <p th:text="'Do you drink?: ' + ${updateSurvey.doYouDrink}" />
+            <br>
+            <p th:text="'Do you care if your roommate drinks?: ' + ${updateSurvey.doesRoommateDrink}" />
+            <br>
+
+        </div>
+        <div class="column">
+
+            <p th:text="'What is your sleep schedule like?: ' + ${updateSurvey.sleepSchedule}" />
+            <br>
+            <p th:text="'What are your cooking habits like?: ' + ${updateSurvey.cookingHabit}" />
+            <br>
+            <p th:text="'What are your cooking habits like?: ' + ${updateSurvey.cookingHabit}" />
+            <br>
+            <p th:text="'What genres of music do you listen to?: ' + ${updateSurvey.musicTaste}" />
+            <br>
+            <p th:text="'Do you have pets?: ' + ${updateSurvey.havePets}" />
+            <br>
+            <p th:text="'Do you work from home?: ' + ${updateSurvey.workFromHome}" />
+            <br>
+            <p th:text="'What are your pet peeves?: ' + ${updateSurvey.petPeeves}" />
+            <br>
+            <p th:text="'Are you looking for anything else specific in a roommate?: ' + ${updateSurvey.whatAreYouLookingFor}" />
+
+
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+</body>
+</html>

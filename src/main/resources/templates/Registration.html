@@ -30,13 +30,13 @@
 
     <h1>CREATE AN ACCOUNT</h1>
 
+    <form action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
 
     <div class="row">
         <div class="column">
-            <br>
-            <form action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
             <label>Username:</label><br>
-            <input type="text" th:field="*{username}"  placeholder="Enter Username" required><br>
+            <input type="text" th:field="*{username}"  placeholder="Enter Username" required>
+            <br>
             <br>
             <label>E-mail:</label><br>
             <input type="email" th:field="*{email}" name="email" placeholder="Enter Email Address" required>
@@ -44,30 +44,30 @@
             <br>
             <label>Password:</label><br>
             <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
-
         </div>
         <div class="column">
-            <br>
-            <input type="radio" name="gender" value="male">Male
-            <input type="radio" name="gender" value="female">Female
-            <input type="radio" name="gender" value="other">Prefer not to say
-            <br>
+            <input type="radio" th:field="*{gender}"  id="option1" value="Male">Male
+            <input type="radio" th:field="*{gender}" id="option2"  value="Female">Female
+            <input type="radio" th:field="*{gender}"  id="option3" value="Other">Other
             <br>
             <br>
             <br>
-            <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday">
-            <br>
-            <br>
+            <label>Birthday:</label>
 
+            <input type="date" th:field="*{birthday}" name="birthday">
+            <br>
+            <br>
         </div>
     </div>
+
+
 
     <br>
     <br>
     <div class="alignbutton">
         <input type="submit" class="regbutton" id="signupbutton" value="Create an Account" align="center">
-    </div>
+
+            </div>
     </form>
 
         <h2>Click <a th:href="@{/UserHomePage}">here</a> to log in.</h2>

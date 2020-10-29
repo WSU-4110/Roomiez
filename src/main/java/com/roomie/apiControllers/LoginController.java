@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class LoginController {
 
     @GetMapping("/LogIn")
-    public String addRadiusSubmit(Model model){
+    public String addLoginSubmit(Model model){
         model.addAttribute("login", new Login());
         return "LogIn";
     }
 
     @PostMapping("/LogIn")
-    public String addRadiusForm(@ModelAttribute Login login, Model model){
+    public String addLoginForm(@ModelAttribute Login login, Model model){
         model.addAttribute("login", login);
         return "UserHomePage";
     }

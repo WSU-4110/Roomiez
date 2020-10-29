@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <title>Roomiez :: Searching by Online</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
@@ -26,113 +26,131 @@
     <li><a href="/PotentialMatches">Search for Matches</a></li>
     <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
     <li><a href="/Settings">Settings</a></li>
-    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
+    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></form></li>
 </ul>
 
 
+<h2>Update Profile Information</h2>
+
+
+<br>
+<br>
+<hr>
+<h2>Personality Survey</h2>
+
 <div class="registrationcontainer" >
-    <div class="row">
-        <div class="q-column">
 
-            <label>What describes you?:</label><br>
-            <input type="radio" name="desc" value="mostlyint">Mostly Introverted<br>
-            <input type="radio" name="desc" value="someint">Somewhat Introverted<br>
-            <input type="radio" name="desc" value="someext">Somewhat Extroverted<br>
-            <input type="radio" name="desc" value="mostlyext">Mostly Extroverted<br>
-            <br>
-            <label>Do you prefer your roommate to be extroverted or introverted?:</label><br>
-            <input type="radio" name="prefdesc" value="int">Introverted<br>
-            <input type="radio" name="prefdesc" value="ext">Extroverted<br>
-            <br>
-            <label>How often do you invite friends over?</label><br>
-            <input type="radio" name="friends" value="n-often">Not often (0-1 days a week)<br>
-            <input type="radio" name="friends" value="s-often">Somewhat often (2-3 days a week)<br>
-            <input type="radio" name="friends" value="p-often">Pretty often (4-5 days a week)<br>
-            <input type="radio" name="friends" value="v-often">Very often (6+ days a week)<br>
-            <br>
-            <label>What are your cleaning habits?</label><br>
-            <input type="radio" name="cleanliness" value="v-dirty">Very dirty<br>
-            <input type="radio" name="cleanliness" value="s-dirty">Somewhat dirty<br>
-            <input type="radio" name="cleanliness" value="middle">Middle of clean and dirty<br>
-            <input type="radio" name="cleanliness" value="s-clean">Somewhat clean<br>
-            <input type="radio" name="cleanliness" value="v-clean">Very clean<br>
-            <br>
-            <label>Do you smoke?</label><br>
-            <input type="radio" name="smoke" value="y-smoke">Yes
-            <input type="radio" name="smoke" value="n-smoke">No
-            <br>
-            <br>
-            <label>Do you care if your roommate smokes?</label><br>
-            <input type="radio" name="prefsmoke" value="y-prefsmoke">Yes
-            <input type="radio" name="prefsmoke" value="y-prefsmoke">No
-            <br>
-            <br>
-            <label>Do you drink?</label><br>
-            <input type="radio" name="drink" value="y-drink">Yes
-            <input type="radio" name="drink" value="n-drink">No
-            <br>
-            <br>
-            <label>Do you care if your roommate drinks?</label><br>
-            <input type="radio" name="prefdrink" value="y-prefdrink">Yes
-            <input type="radio" name="prefdrink" value="n-prefdrink">No
-            <br>
-            <br>
-            <label>What is your sleep schedule like?</label><br>
-            <input type="radio" name="sleep" value="v-early">Early Riser<br>
-            <input type="radio" name="sleep" value="s-early">Somewhat of an Early Riser<br>
-            <input type="radio" name="sleep" value="s-late">Somewhat of a Late Riser<br>
-            <input type="radio" name="sleep" value="v-late">Late Riser<br>
-            <br>
-            <label>What are your cooking habits like?</label><br>
-            <input type="radio" name="eating" value="a-cook">Always cook at home<br>
-            <input type="radio" name="eating" value="m-cook">Mostly cook at home<br>
-            <input type="radio" name="eating" value="m-cook">Mostly eat out<br>
-            <input type="radio" name="eating" value="a-cook"> Always eat out<br>
-            <br>
+        <form action="#" th:action="@{/UpdateUserProfile}" th:object= "${updateSurvey}" method="post">
+        <div class="row">
+                <div class="column">
+                        <label><h2>What describes you?:</h2></label><br>
+                        <input type="radio" th:field="*{whatDescribesYou}"  value="Mostly Introverted">Mostly Introverted<br>
+                        <input type="radio" th:field="*{whatDescribesYou}"  value="Somewhat Introverted">Somewhat Introverted<br>
+                        <input type="radio" th:field="*{whatDescribesYou}"  value="Somewhat Extroverted">Somewhat Extroverted<br>
+                        <input type="radio" th:field="*{whatDescribesYou}"  value="Mostly Extroverted">Mostly Extroverted<br>
+                        <br>
+
+
+                        <label><h2>Do you prefer your roommate to be extroverted or introverted?:</h2></label><br>
+                        <input type="radio" th:field="*{extrovertedOrIntroverted}" name="prefdesc" value="Introverted">Introverted<br>
+                        <input type="radio" th:field="*{extrovertedOrIntroverted}" name="prefdesc" value="Extroverted">Extroverted<br>
+                        <br>
+                        <label><h2>How often do you invite friends over?</h2></label><br>
+                        <input type="radio" name="friends" th:field="*{inviteFriendsOver}" value="Not often (0-1 days a week)">Not often (0-1 days a week)<br>
+                        <input type="radio" name="friends" th:field="*{inviteFriendsOver}" value="Somewhat often (2-3 days a week)">Somewhat often (2-3 days a week)<br>
+                        <input type="radio" name="friends" th:field="*{inviteFriendsOver}" value="Pretty often (4-5 days a week)">Pretty often (4-5 days a week)<br>
+                        <input type="radio" name="friends" th:field="*{inviteFriendsOver}" value="Very often (6+ days a week)">Very often (6+ days a week)<br>
+                        <br>
+                        <label><h2>What are your cleaning habits?</h2></label><br>
+                        <input type="radio" name="cleanliness" th:field="*{cleaningHabits}" value="Very dirty">Very dirty<br>
+                        <input type="radio" name="cleanliness" th:field="*{cleaningHabits}" value="Somewhat dirty">Somewhat dirty<br>
+                        <input type="radio" name="cleanliness" th:field="*{cleaningHabits}" value="Middle of clean and dirty">Middle of clean and dirty<br>
+                        <input type="radio" name="cleanliness" th:field="*{cleaningHabits}" value="Somewhat clean">Somewhat clean<br>
+                        <input type="radio" name="cleanliness" th:field="*{cleaningHabits}" value="Very clean">Very clean<br>
+                        <br>
+                        <label><h2>Do you smoke?</h2></label><br>
+                        <input type="radio" name="smoke" th:field="*{doYouSmoke}" value="Yes, I smoke">Yes
+                        <input type="radio" name="smoke" th:field="*{doYouSmoke}" value="No, I don't smoke">No
+                        <br>
+                        <br>
+                        <label><h2>Do you care if your roommate smokes?</h2></label><br>
+                        <input type="radio" name="prefsmoke" th:field="*{doesRoommateSmoke}"  value="Sure, they can smoke">Yes
+                        <input type="radio" name="prefsmoke" th:field="*{doesRoommateSmoke}" value="No smokers, please">No
+                        <br>
+                        <br>
+                        <label><h2>Do you drink?</h2></label><br>
+                        <input type="radio" name="drink" th:field="*{doYouDrink}"  value="Yes, I drink">Yes
+                        <input type="radio" name="drink" th:field="*{doYouDrink}" value="No, I don't drink">No
+                        <br>
+                        <br>
+                        <label><h2>Do you care if your roommate drinks?</h2></label><br>
+                        <input type="radio" name="prefdrink" th:field="*{doesRoommateDrink}"  value="Sure, they can drink">Yes
+                        <input type="radio" name="prefdrink" th:field="*{doesRoommateDrink}" value="No drinkers, please">No
+                        <br>
+                        <br>
+                        <label><h2>What is your sleep schedule like?</h2></label><br>
+                        <input type="radio" name="sleep" th:field="*{sleepSchedule}" value="Early Riser">Early Riser<br>
+                        <input type="radio" name="sleep" th:field="*{sleepSchedule}"value="Somewhat of an Early Riser">Somewhat of an Early Riser<br>
+                        <input type="radio" name="sleep" th:field="*{sleepSchedule}" value="Somewhat of a Late Riser">Somewhat of a Late Riser<br>
+                        <input type="radio" name="sleep" th:field="*{sleepSchedule}" value="Late Riser">Late Riser<br>
+                        <br>
+
+                </div>
+                <div class="column">
+                        <label><h2>What are your cooking habits like?</h2></label><br>
+                        <input type="radio" name="eating" th:field="*{cookingHabit}" value="Always cook at home">Always cook at home<br>
+                        <input type="radio" name="eating" th:field="*{cookingHabit}" value="Mostly cook at home">Mostly cook at home<br>
+                        <input type="radio" name="eating" th:field="*{cookingHabit}" value="Mostly eat out">Mostly eat out<br>
+                        <input type="radio" name="eating" th:field="*{cookingHabit}" value=" Always eat out"> Always eat out<br>
+                        <br>
+                        <label><h2>What genres of music do you listen to?</h2></label><br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="jazz">Jazz<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="folk">Folk Music<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="hhrap">Hip Hop/rap<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="kpop">K-Pop<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="blues">Blues<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="pop">Pop<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="country">Country<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="reggae">Reggae<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="rock">Rock<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="randblues">Rhythm and Blues<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="punk">Punk Rock<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="classical">Classical<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="disco">Disco<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="hmetal">Heavy metal<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="funk">Funk<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="techno">Techno<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="opera">Opera<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="gospel">Gospel<br>
+                        <input type="checkbox" name="music" th:field="*{musicTaste}" value="other">Other<br>
+                        <br>
+
+                        <label><h2>Do you have pets?</h2></label><br>
+                        <input type="radio" name="pets" th:field="*{havePets}"  value="Yes, I have pets">Yes
+                        <input type="radio" name="pets" th:field="*{havePets}" value="No, I don't have pets">No
+                        <br>
+                        <br>
+                        <label><h2>Do you work from home?</h2></label><br>
+                        <input type="radio" name="work" th:field="*{workFromHome}" value="Yes, I work from home">Always<br>
+                        <input type="radio" name="work" th:field="*{workFromHome}" value="I sometimes work from home">Sometimes<br>
+                        <input type="radio" name="work" th:field="*{workFromHome}" value="I don't work from home">Never<br>
+                        <br>
+
+                        <label><h2>What are your pet peeves?</h2></label><br>
+                        <input type="text"  name="petpeeves" th:field="*{petPeeves}" placeholder="Pet peeves....">
+                        <br>
+                        <br>
+                        <label><h2>Are you looking for anything else specific in a roommate?</h2></label><br>
+                        <input type="text" name="extra" th:field="*{whatAreYouLookingFor}"  placeholder="Anything else....">
+                        <br>
+                </div>
         </div>
-        <div class="q-column">
-            <label>What genres of music do you listen to?</label><br>
-            <input type="checkbox" name="music" value="jazz">Jazz<br>
-            <input type="checkbox" name="music" value="folk">Folk Music<br>
-            <input type="checkbox" name="music" value="hhrap">Hip Hop/rap<br>
-            <input type="checkbox" name="music" value="kpop">K-Pop<br>
-            <input type="checkbox" name="music" value="blues">Blues<br>
-            <input type="checkbox" name="music" value="pop">Pop<br>
-            <input type="checkbox" name="music" value="country">Country<br>
-            <input type="checkbox" name="music" value="reggae">Reggae<br>
-            <input type="checkbox" name="music" value="rock">Rock<br>
-            <input type="checkbox" name="music" value="randblues">Rhythm and Blues<br>
-            <input type="checkbox" name="music" value="punk">Punk Rock<br>
-            <input type="checkbox" name="music" value="classical">Classical<br>
-            <input type="checkbox" name="music" value="disco">Disco<br>
-            <input type="checkbox" name="music" value="hmetal">Heavy metal<br>
-            <input type="checkbox" name="music" value="funk">Funk<br>
-            <input type="checkbox" name="music" value="techno">Techno<br>
-            <input type="checkbox" name="music" value="opera">Opera<br>
-            <input type="checkbox" name="music" value="gospel">Gospel<br>
-            <input type="checkbox" name="music" value="other">Other (specify)<br>
-            <br>
 
-            <label>Do you have pets?</label><br>
-            <input type="radio" name="pets" value="y-pets">Yes
-            <input type="radio" name="pets" value="n-pets">No
-            <br>
-            <br>
-            <label>Do you work from home?</label><br>
-            <input type="radio" name="pets" value="y-pets">Always<br>
-            <input type="radio" name="pets" value="y-pets">Sometimes<br>
-            <input type="radio" name="pets" value="y-pets">Never<br>
-            <br>
-
-            <label>What are your pet peeves?</label><br>
-            <input type="text"  name="petpeeves" placeholder="Pet peeves....">
-            <br>
-            <br>
-            <label>Are you looking for anything else specific in a roommate?</label><br>
-            <input type="text" name="extra" placeholder="Anything else....">
-            <br>
+                <div class="alignbutton">
+                        <input type="submit" class="regbutton" id="signupbutton" value="Submit Survey" align="center">
         </div>
-    </div>
+    </form>
+
 </div>
 </body>
 </html>

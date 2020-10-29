@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 
 <head>
     <title>Roomiez :: Welcome Home </title>
@@ -27,7 +27,7 @@
     <li><a href="/PotentialMatches">Search for Matches</a></li>
     <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
     <li><a href="/Settings">Settings</a></li>
-    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
+    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></form></li>
 </ul>
 
 
@@ -36,6 +36,9 @@
 
     <h1>Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
     <h2>Find Your Roomie Today!</h2>
+
+
+    <h2>[[${#httpServletRequest.remoteUser}]]'s Preferences</h2>
 
 
 
