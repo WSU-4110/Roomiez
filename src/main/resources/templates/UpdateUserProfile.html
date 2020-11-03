@@ -28,8 +28,36 @@
     <li><a href="/Settings">Settings</a></li>
     <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
 </ul>
+<div class="row">
+    <div class="q-column">
+        <p>Current Username: [[${#httpServletRequest.remoteUser}]]</p>
+        <p>Current Email Address: </p>
+    </div>
+</div>
+<h2>Update Profile</h2>
+<div class="registrationcontainer">
+    <div class="row">
+        <div class="q-column">
+            <div class="logintext">
 
-
+                <input type="text" name="updateUsername"  placeholder="Update Username"><br>
+                <br>
+                <input type="password" name="updatePassword" placeholder="Update Password"><br>
+                <br>
+                <input type="email" name="updateEmail" placeholder="Update Email Address "><br>
+                <br>
+                <input type="text" name="Profession"  placeholder="Enter Profession (ex: Student, Server, etc.)"><br>
+                <br>
+                <input type="date" name="birthDate" placeholder="Enter Birth Date" required><br>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="alignbutton">
+    <input type="submit" class="regbutton" id="signupbutton" value="Update Profile" align="center">
+</div>
+<h2>Personality Survey</h2>
 <div class="registrationcontainer" >
     <div class="row">
         <div class="q-column">
