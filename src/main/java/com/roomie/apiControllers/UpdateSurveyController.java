@@ -11,13 +11,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class UpdateSurveyController {
 
-    @GetMapping("/UpdateUserProfile")
-    public String addUserInformation(Model model){
-        model.addAttribute("updateSurvey", new UpdateSurvey());
-        return "UpdateUserProfile";
-    }
+//    @GetMapping("/UpdateUserSurvey")
+//    public String addUserInformation(Model model){
+//        model.addAttribute("updateSurvey", new UpdateSurvey());
+//        return "UpdateUserProfile";
+//    }
 
-    @PostMapping("/UpdateUserProfile")
+    @PostMapping("/UpdateUserSurvey")
     public String postUserInformation(@ModelAttribute UpdateSurvey updateSurvey, Model model){
         model.addAttribute("updateSurvey", updateSurvey);
         return "UserProfile";

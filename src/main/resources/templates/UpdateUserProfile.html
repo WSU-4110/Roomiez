@@ -30,17 +30,56 @@
 </ul>
 
 
-<h2>Update Profile Information</h2>
+<h1>Update Profile Information</h1>
+
+<div class="registrationcontainer" >
+        <form action="#" th:action="@{/UpdateUserProfile}" th:object= "${updateUserProfile}" method="post">
+        <label><h2>Help others know you with a catchy headline </h2></label><br>
+        <textarea rows="2" cols="50" name="comment" th:field="*{headLine}"  placeholder="Headline"></textarea>
+                <div class="row">
+                        <div class="column">
+                                <label><h2>Enter Profession:</h2></label><br>
+                                <input type="text" name="Profession"  th:field="*{profession}" placeholder="Profession: "><br>
+                                <br>
+                                <label><h2>Enter Social Media Handle:</h2></label><br>
+                                <input type="text" name="SocialMedia" th:field="*{socialMedia}" placeholder="Social Media:"><br>
+                                <br>
+                                <label><h2>Enter Age:</h2></label><br>
+                                <input type="text" name="Age" th:field="*{age}" placeholder="Age: "><br>
+                                <br>
+
+
+                        </div>
+                        <div class="column">
+                                <label><h2>Enter Current City:</h2></label><br>
+                                <input type="text" name="city"  th:field="*{currentCity}" placeholder="Current City: "><br>
+                                <br>
+                                <label><h2>Enter Languages You Speak:</h2></label><br>
+                                <input type="text" name="Language" th:field="*{language}"  placeholder="Languages: "><br>
+                                <br>
+                                <label><h2>What is the most important thing that people should know about you?</h2></label><br>
+                                <textarea rows="5" cols="60" name="comment"  th:field="*{importantThing}" placeholder="Hobbies, dreams, favorite memories."></textarea>
+                                <br>
+
+                        </div>
+                </div>
+
+                <div class="alignbutton">
+                        <input type="submit" class="regbutton" id="signupbutton" value="Submit Profile Changes" align="center">
+                </div>
+        </form>
+
+</div>
 
 
 <br>
 <br>
 <hr>
-<h2>Personality Survey</h2>
+<h1>Personality Survey</h1>
 
 <div class="registrationcontainer" >
 
-        <form action="#" th:action="@{/UpdateUserProfile}" th:object= "${updateSurvey}" method="post">
+        <form action="#" th:action="@{/UpdateUserSurvey}" th:object= "${updateSurvey}" method="post">
         <div class="row">
                 <div class="column">
                         <label><h2>What describes you?:</h2></label><br>

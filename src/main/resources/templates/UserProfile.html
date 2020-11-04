@@ -34,11 +34,45 @@
 
 <div class="registrationcontainer">
 
+    <h2>[[${#httpServletRequest.remoteUser}]]'s Profile Information</h2>
+
+    <p th:text="${updateUserProfile.headLine}" />
+    <br>
+
+    <div class="row">
+        <div class="column">
+            <p th:text="'Profession: ' + ${updateUserProfile.profession}" />
+            <br>
+            <p th:text="'Social Media Handle: ' + ${updateUserProfile.profession}" />
+            <br>
+            <p th:text="'Age: ' + ${updateUserProfile.age}" />
+            <br>
+        </div>
+        <div class="column">
+
+            <p th:text="'Current City: ' + ${updateUserProfile.currentCity}" />
+            <br>
+            <p th:text="'Language: ' + ${updateUserProfile.language}" />
+            <br>
+
+        </div>
+    </div>
+    <p th:text="${updateUserProfile.importantThing}" />
+    <br>
+</div>
+
+
+
+<hr>
+
+
+<div class="registrationcontainer">
+
     <h2>[[${#httpServletRequest.remoteUser}]]'s Preferences</h2>
 
     <div class="row">
         <div class="column">
-            <p th:text="'What Describes you: ' + ${updateSurvey.whatDescribesYou}" />
+            <p th:text="'What Describes you: ' + ${updateUserProfile.whatDescribesYou}" />
             <br>
             <p th:text="'Do you prefer your roommate to be extroverted or introverted?: ' + ${updateSurvey.extrovertedOrIntroverted}" />
             <br>
@@ -77,11 +111,6 @@
 
         </div>
     </div>
-
-
-
-
-
 
 </div>
 </body>
