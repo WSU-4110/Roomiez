@@ -1,4 +1,4 @@
-package com.roomie.service;
+package com.roomie.Repository;
 
 import com.roomie.model.NewUser;
 import org.springframework.data.repository.CrudRepository;

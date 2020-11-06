@@ -1,22 +1,20 @@
-package com.roomie.model;
+package com.roomie.web;
 
-public class NewUserForm {
-
-    private Long id;
+public class NewUserRegistrationDto {
 
     private String username;
-
     private String email;
-
     private String password;
+    private String birthday;
 
-
-    public Long getId() {
-        return id;
+    public NewUserRegistrationDto() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public NewUserRegistrationDto(String username, String email, String password, String birthday) {
+        this.username = username;
+        this.email = email;
+        this.password = password;
+        this.birthday = birthday;
     }
 
     public String getUsername() {
@@ -43,4 +41,11 @@ public class NewUserForm {
         this.password = password;
     }
 
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
+    }
 }

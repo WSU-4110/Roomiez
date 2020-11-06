@@ -30,8 +30,7 @@
 
     <h1>CREATE AN ACCOUNT</h1>
 
-    <form action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
-
+    <form action="#" th:action="@{/Registration}" th:object= "${newUser}" modelAttribute="newUser" method="post">
 
 
     <div class="row">
@@ -48,9 +47,9 @@
             <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
         </div>
         <div class="column">
-            <input type="radio" th:field="*{gender}"  id="option1" value="Male">Male
-            <input type="radio" th:field="*{gender}" id="option2"  value="Female">Female
-            <input type="radio" th:field="*{gender}"  id="option3" value="Other">Other
+            <input type="radio"  id="option1" value="Male">Male
+            <input type="radio"  id="option2"  value="Female">Female
+            <input type="radio"  id="option3" value="Other">Other
             <br>
             <br>
             <br>
