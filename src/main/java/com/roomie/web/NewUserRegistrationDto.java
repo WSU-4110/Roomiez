@@ -6,6 +6,7 @@ public class NewUserRegistrationDto {
     private String email;
     private String password;
     private String birthday;
+    private String gender;
 
     public NewUserRegistrationDto() {
     }
@@ -15,6 +16,7 @@ public class NewUserRegistrationDto {
         this.email = email;
         this.password = password;
         this.birthday = birthday;
+
     }
 
     public String getUsername() {

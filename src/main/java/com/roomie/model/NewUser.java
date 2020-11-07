@@ -37,6 +37,7 @@ public class NewUser {
         this.email = email;
         this.password = password;
         this.birthday = birthday;
+
     }
 
     public Long getId() {
