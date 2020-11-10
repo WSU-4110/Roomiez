@@ -19,7 +19,7 @@ public class LoginController {
     @PostMapping("/LogIn")
     public String addLoginForm(@ModelAttribute Login login, Model model){
         model.addAttribute("login", login);
-        return "UserHomePage";
+        return "PotentialMatches";
     }
 
 }

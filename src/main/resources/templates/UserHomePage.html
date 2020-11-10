@@ -23,7 +23,7 @@
 <body>
 <hr>
 <ul>
-    <li><a href="/UpdateUserProfile">Edit Profile</a></li>
+    <li><a href="/surveyForm">Edit Profile</a></li>
     <li><a href="/PotentialMatches">Search for Matches</a></li>
     <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
     <li><a href="/Settings">Settings</a></li>
@@ -40,6 +40,45 @@
 
     <h2>[[${#httpServletRequest.remoteUser}]]'s Preferences</h2>
 
+        <div class="row">
+            <div class="column">
+                <p th:text="'What Describes you: ' + ${results.whatDescribesYou}" />
+                <br>
+                <p th:text="'Do you prefer your roommate to be extroverted or introverted?: ' + ${results.extrovertedOrIntroverted}" />
+                <br>
+                <p th:text="'How often do you invite friends over?: ' + ${results.inviteFriendsOver}" />
+                <br>
+                <p th:text="'What are your cleaning habits?: ' + ${results.cleaningHabits}" />
+                <br>
+                <p th:text="'Do you smoke?: ' + ${results.doYouSmoke}" />
+                <br>
+                <p th:text="'Do you care if your roommate smokes?: ' + ${results.doesRoommateSmoke}" />
+                <br>
+                <p th:text="'Do you drink?: ' + ${results.doYouDrink}" />
+                <br>
+                <p th:text="'Do you care if your roommate drinks?: ' + ${results.doesRoommateDrink}" />
+                <br>
+
+            </div>
+            <div class="column">
+
+                <p th:text="'What is your sleep schedule like?: ' + ${results.sleepSchedule}" />
+                <br>
+                <p th:text="'What are your cooking habits like?: ' + ${results.cookingHabit}" />
+                <br>
+                <p th:text="'What genres of music do you listen to?: ' + ${results.musicTaste}" />
+                <br>
+                <p th:text="'Do you have pets?: ' + ${results.havePets}" />
+                <br>
+                <p th:text="'Do you work from home?: ' + ${results.workFromHome}" />
+                <br>
+                <p th:text="'What are your pet peeves?: ' + ${results.petPeeves}" />
+                <br>
+                <p th:text="'Are you looking for anything else specific in a roommate?: ' + ${results.whatAreYouLookingFor}" />
+
+
+            </div>
+        </div>
 
 
 </div>

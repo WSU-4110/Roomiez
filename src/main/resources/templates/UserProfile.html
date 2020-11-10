@@ -36,30 +36,30 @@
 
     <h2>[[${#httpServletRequest.remoteUser}]]'s Profile Information</h2>
 
-    <p th:text="${updateUserProfile.headLine}" />
-    <br>
+<!--    <p th:text="${updateUserProfile.headLine}" />-->
+<!--    <br>-->
 
-    <div class="row">
-        <div class="column">
-            <p th:text="'Profession: ' + ${updateUserProfile.profession}" />
-            <br>
-            <p th:text="'Social Media Handle: ' + ${updateUserProfile.profession}" />
-            <br>
-            <p th:text="'Age: ' + ${updateUserProfile.age}" />
-            <br>
-        </div>
-        <div class="column">
+<!--    <div class="row">-->
+<!--        <div class="column">-->
+<!--            <p th:text="'Profession: ' + ${updateUserProfile.profession}" />-->
+<!--            <br>-->
+<!--            <p th:text="'Social Media Handle: ' + ${updateUserProfile.profession}" />-->
+<!--            <br>-->
+<!--            <p th:text="'Age: ' + ${updateUserProfile.age}" />-->
+<!--            <br>-->
+<!--        </div>-->
+<!--        <div class="column">-->
 
-            <p th:text="'Current City: ' + ${updateUserProfile.currentCity}" />
-            <br>
-            <p th:text="'Language: ' + ${updateUserProfile.language}" />
-            <br>
+<!--            <p th:text="'Current City: ' + ${updateUserProfile.currentCity}" />-->
+<!--            <br>-->
+<!--            <p th:text="'Language: ' + ${updateUserProfile.language}" />-->
+<!--            <br>-->
 
-        </div>
-    </div>
-    <p th:text="${updateUserProfile.importantThing}" />
-    <br>
-</div>
+<!--        </div>-->
+<!--    </div>-->
+<!--    <p th:text="${updateUserProfile.importantThing}" />-->
+<!--    <br>-->
+<!--</div>-->
 
 
 
@@ -68,49 +68,49 @@
 
 <div class="registrationcontainer">
 
-<!--    <h2>[[${#httpServletRequest.remoteUser}]]'s Preferences</h2>-->
+    <h2>[[${#httpServletRequest.remoteUser}]]'s Preferences</h2>
 
-<!--    <div class="row">-->
-<!--        <div class="column">-->
-<!--            <p th:text="'What Describes you: ' + ${updateSurvey.whatDescribesYou}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Do you prefer your roommate to be extroverted or introverted?: ' + ${updateSurvey.extrovertedOrIntroverted}" />-->
-<!--            <br>-->
-<!--            <p th:text="'How often do you invite friends over?: ' + ${updateSurvey.inviteFriendsOver}" />-->
-<!--            <br>-->
-<!--            <p th:text="'What are your cleaning habits?: ' + ${updateSurvey.cleaningHabits}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Do you smoke?: ' + ${updateSurvey.doYouSmoke}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Do you care if your roommate smokes?: ' + ${updateSurvey.doesRoommateSmoke}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Do you drink?: ' + ${updateSurvey.doYouDrink}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Do you care if your roommate drinks?: ' + ${updateSurvey.doesRoommateDrink}" />-->
-<!--            <br>-->
+    <div class="row">
+        <div class="column">
+            <p th:text="'What Describes you: ' + ${updateSurvey.whatDescribesYou}" />
+            <br>
+            <p th:text="'Do you prefer your roommate to be extroverted or introverted?: ' + ${updateSurvey.extrovertedOrIntroverted}" />
+            <br>
+            <p th:text="'How often do you invite friends over?: ' + ${updateSurvey.inviteFriendsOver}" />
+            <br>
+            <p th:text="'What are your cleaning habits?: ' + ${updateSurvey.cleaningHabits}" />
+            <br>
+            <p th:text="'Do you smoke?: ' + ${updateSurvey.doYouSmoke}" />
+            <br>
+            <p th:text="'Do you care if your roommate smokes?: ' + ${updateSurvey.doesRoommateSmoke}" />
+            <br>
+            <p th:text="'Do you drink?: ' + ${updateSurvey.doYouDrink}" />
+            <br>
+            <p th:text="'Do you care if your roommate drinks?: ' + ${updateSurvey.doesRoommateDrink}" />
+            <br>
 
-<!--        </div>-->
-<!--        <div class="column">-->
+        </div>
+        <div class="column">
 
-<!--            <p th:text="'What is your sleep schedule like?: ' + ${updateSurvey.sleepSchedule}" />-->
-<!--            <br>-->
-<!--            <p th:text="'What are your cooking habits like?: ' + ${updateSurvey.cookingHabit}" />-->
-<!--            <br>-->
-<!--            <p th:text="'What are your cooking habits like?: ' + ${updateSurvey.cookingHabit}" />-->
-<!--            <br>-->
-<!--            <p th:text="'What genres of music do you listen to?: ' + ${updateSurvey.musicTaste}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Do you have pets?: ' + ${updateSurvey.havePets}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Do you work from home?: ' + ${updateSurvey.workFromHome}" />-->
-<!--            <br>-->
-<!--            <p th:text="'What are your pet peeves?: ' + ${updateSurvey.petPeeves}" />-->
-<!--            <br>-->
-<!--            <p th:text="'Are you looking for anything else specific in a roommate?: ' + ${updateSurvey.whatAreYouLookingFor}" />-->
+            <p th:text="'What is your sleep schedule like?: ' + ${updateSurvey.sleepSchedule}" />
+            <br>
+            <p th:text="'What are your cooking habits like?: ' + ${updateSurvey.cookingHabit}" />
+            <br>
+            <p th:text="'What are your cooking habits like?: ' + ${updateSurvey.cookingHabit}" />
+            <br>
+            <p th:text="'What genres of music do you listen to?: ' + ${updateSurvey.musicTaste}" />
+            <br>
+            <p th:text="'Do you have pets?: ' + ${updateSurvey.havePets}" />
+            <br>
+            <p th:text="'Do you work from home?: ' + ${updateSurvey.workFromHome}" />
+            <br>
+            <p th:text="'What are your pet peeves?: ' + ${updateSurvey.petPeeves}" />
+            <br>
+            <p th:text="'Are you looking for anything else specific in a roommate?: ' + ${updateSurvey.whatAreYouLookingFor}" />
 
 
-<!--        </div>-->
-<!--    </div>-->
+        </div>
+    </div>
 
 </div>
 </body>

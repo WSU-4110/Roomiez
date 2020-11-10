@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller
-public class UpdateSurveyController {
-
-//    @GetMapping("/UpdateUserSurvey")
-//    public String addUserInformation(Model model){
-//        model.addAttribute("updateSurvey", new UpdateSurvey());
-//        return "UpdateUserProfile";
+//@Controller
+//public class UpdateSurveyController {
+//
+////    @GetMapping("/UpdateUserSurvey")
+////    public String addUserInformation(Model model){
+////        model.addAttribute("updateSurvey", new UpdateSurvey());
+////        return "UpdateUserProfile";
+////    }
+//
+//    @PostMapping("/UpdateUserSurvey")
+//    public String postUserInformation(@ModelAttribute UpdateSurvey updateSurvey, Model model){
+//        model.addAttribute("updateSurvey", updateSurvey);
+//        return "UserProfile";
 //    }
-
-    @PostMapping("/UpdateUserSurvey")
-    public String postUserInformation(@ModelAttribute UpdateSurvey updateSurvey, Model model){
-        model.addAttribute("updateSurvey", updateSurvey);
-        return "UserProfile";
-    }
-}
+//}
