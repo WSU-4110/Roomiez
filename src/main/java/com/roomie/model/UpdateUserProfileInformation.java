@@ -1,15 +1,57 @@
 package com.roomie.model;
 
-public class UpdateUserProfile {
+import javax.persistence.*;
 
+@Entity
+@Table(name = "user_profile")
+public class UpdateUserProfileInformation {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "headline")
     private String headLine;
+
+    @Column(name = "profession")
     private String profession;
+
+    @Column(name = "socialmedia")
     private String socialMedia;
+
+    @Column(name = "age")
     private String age;
+
+    @Column(name = "currentcity")
     private String currentCity;
+
+    @Column(name = "language")
     private String language;
+
+    @Column(name = "importantthing")
     private String importantThing;
 
+    public UpdateUserProfileInformation() {
+    }
+
+    public UpdateUserProfileInformation(String headLine, String profession, String socialMedia,
+                                        String age, String currentCity, String language, String importantThing) {
+        this.headLine = headLine;
+        this.profession = profession;
+        this.socialMedia = socialMedia;
+        this.age = age;
+        this.currentCity = currentCity;
+        this.language = language;
+        this.importantThing = importantThing;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getHeadLine() {
         return headLine;

@@ -59,7 +59,11 @@ public class UserSurveyResults {
     public UserSurveyResults() {
     }
 
-    public UserSurveyResults(String whatDescribesYou, String extrovertedOrIntroverted, String inviteFriendsOver, String cleaningHabits, String doYouSmoke, String doesRoommateSmoke, String doYouDrink, String doesRoommateDrink, String sleepSchedule, String cookingHabit, String musicTaste, String havePets, String workFromHome, String petPeeves, String whatAreYouLookingFor) {
+    public UserSurveyResults(String whatDescribesYou, String extrovertedOrIntroverted,
+                             String inviteFriendsOver, String cleaningHabits, String doYouSmoke,
+                             String doesRoommateSmoke, String doYouDrink, String doesRoommateDrink,
+                             String sleepSchedule, String cookingHabit, String musicTaste, String havePets,
+                             String workFromHome, String petPeeves, String whatAreYouLookingFor) {
         this.whatDescribesYou = whatDescribesYou;
         this.extrovertedOrIntroverted = extrovertedOrIntroverted;
         this.inviteFriendsOver = inviteFriendsOver;
