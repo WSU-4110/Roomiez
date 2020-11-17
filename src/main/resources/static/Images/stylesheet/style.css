@@ -272,3 +272,29 @@ li a:hover:not(.active) {
 }
 
 
+
+.searchbar button {
+  padding: 8px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.searchbar input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font: "American Typewriter";
+  font-size: 17px;
+  border-color: lightgrey;
+}
+
+.searchbar button:hover {
+  background: #ccc;
+}
+
