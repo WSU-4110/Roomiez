@@ -2,27 +2,35 @@ package com.roomie.web;
 
 public class NewUserRegistrationDto {
 
-    private String username;
+    private String firstName;
+    private String lastName;
     private String email;
     private String password;
-    private String birthday;
 
     public NewUserRegistrationDto() {
     }
 
-    public NewUserRegistrationDto(String username, String email, String password, String birthday) {
-        this.username = username;
+    public NewUserRegistrationDto(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.birthday = birthday;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -39,13 +47,5 @@ public class NewUserRegistrationDto {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getBirthday() {
-        return birthday;
-    }
-
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
     }
 }

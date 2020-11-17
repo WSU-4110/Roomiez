@@ -10,16 +10,31 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class LoginController {
 
-    @GetMapping("/LogIn")
-    public String addLoginSubmit(Model model){
-        model.addAttribute("login", new Login());
+//    @GetMapping("/LogIn")
+//    public String addLoginSubmit(Model model){
+//        model.addAttribute("login", new Login());
+//        return "LogIn";
+//    }
+//
+//    @PostMapping("/LogIn")
+//    public String addLoginForm(@ModelAttribute Login login, Model model){
+//        model.addAttribute("login", login);
+//        return "PotentialMatches";
+//    }
+
+
+    @GetMapping("/")
+    public String root() {
+        return "UserHomePage";
+    }
+
+    @GetMapping("/login")
+    public String login(Model model) {
         return "LogIn";
     }
 
-    @PostMapping("/LogIn")
-    public String addLoginForm(@ModelAttribute Login login, Model model){
-        model.addAttribute("login", login);
-        return "PotentialMatches";
+    @GetMapping("/newUser")
+    public String userIndex() {
+        return "newUser/UserHomePage";
     }
-
 }

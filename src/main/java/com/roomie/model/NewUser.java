@@ -5,18 +5,22 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.*;
+import java.util.Collection;
 
 
 @Entity
-@Table(name="registration", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
+@Table(name="newest_user", uniqueConstraints = @UniqueConstraint(columnNames = "email"))
 public class NewUser {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "username")
-    private String username;
+    @Column(name = "first")
+    private String firstName;
+
+    @Column(name = "last")
+    private String lastName;
 
     @Column(name = "email")
     private String email;
@@ -24,19 +28,35 @@ public class NewUser {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "userbirthday")
-    private String birthday;
+
+
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(
+            name = "user_roles",
+            joinColumns = @JoinColumn(
+                    name = "user_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(
+                    name = "role_id", referencedColumnName = "id"))
+            private Collection<Role> roles;
 
 
     public NewUser() {
 
     }
 
-    public NewUser(String username, String email, String password, String birthday) {
-        this.username = username;
+    public NewUser(String firstName, String lastName, String email, String password, Collection<Role> roles) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
-        this.birthday = birthday;
+        this.roles = roles;
+    }
+
+    public NewUser(String firstName, String lastName, String email, String password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
     }
 
     public Long getId() {
@@ -47,12 +67,20 @@ public class NewUser {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmail() {
@@ -71,11 +99,12 @@ public class NewUser {
         this.password = password;
     }
 
-    public String getBirthday() {
-        return birthday;
+
+    public Collection<Role> getRoles() {
+        return roles;
     }
 
-    public void setBirthday(String birthday) {
-        this.birthday = birthday;
+    public void setRoles(Collection<Role> roles) {
+        this.roles = roles;
     }
 }

@@ -8,6 +8,8 @@ import java.util.*;
 @Repository
 public interface NewUserRepository extends CrudRepository <NewUser, Long> {
 
+    NewUser findByEmail(String email);
+
 }
 
 
