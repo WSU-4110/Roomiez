@@ -4,6 +4,7 @@ public class NewMemberDays {
 
     private long newMemberDays;
 
+
     public long getNewMemberDays() {
         return newMemberDays;
     }
