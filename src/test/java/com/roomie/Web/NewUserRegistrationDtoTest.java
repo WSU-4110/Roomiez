@@ -9,6 +9,7 @@ public class NewUserRegistrationDtoTest {
     NewUserRegistrationDto registrationDto = new NewUserRegistrationDto("Kelly", "Maisel", "email", "password");
 
     @Test
+    //This test is to see if the first name will store properly
     public void firstNameDtoTest(){
        String expected = "Kelly";
        String actual = registrationDto.getFirstName();
@@ -17,6 +18,7 @@ public class NewUserRegistrationDtoTest {
     }
 
     @Test
+    //This test is to see if the last name will store properly
     public void lastNameDtoTest(){
         String expected = "Maisel";
         String actual = registrationDto.getLastName();
@@ -26,6 +28,7 @@ public class NewUserRegistrationDtoTest {
     }
 
     @Test
+    //This test is to see if the email will store properly
     public void emailDtoTest(){
         String expected = "email";
         String actual = registrationDto.getEmail();
@@ -35,6 +38,7 @@ public class NewUserRegistrationDtoTest {
     }
 
     @Test
+    //This test is to see if the password will store properly
     public void passwordDtoTest(){
         String expected = "password";
         String actual = registrationDto.getPassword();

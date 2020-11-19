@@ -18,6 +18,7 @@ public class HttpRequestTest {
     private TestRestTemplate restTemplate;
 
     @Test
+    //This test is to see if the local host will render the website properly
     public void homeShouldReturnDefaultMessage()throws Exception{
         assertThat(this.restTemplate.getForObject("http://localhost:" + port + "/home",
                 String.class)).contains("<!DOCTYPE html>\n" +

@@ -11,6 +11,7 @@ public class UpdateUserProfileInformationTest {
                     "20", "Detroit", "English", "I love dogs!");
 
     @Test
+    //This test is to see if the headline will store properly
     public void getHeadlineTest(){
         String expected = "headline";
         String actual = update.getHeadLine();
@@ -20,6 +21,7 @@ public class UpdateUserProfileInformationTest {
 
 
     @Test
+    //This test is to see if the profession will store properly
     public void getProfessionTest(){
         String expected = "doctor";
         String actual = update.getProfession();
@@ -28,6 +30,8 @@ public class UpdateUserProfileInformationTest {
     }
 
     @Test
+    //This test is to see if the Social Media will store properly
+
     public void getSocialMediaTest(){
         String expected = "facebook";
         String actual = update.getSocialMedia();
@@ -37,6 +41,7 @@ public class UpdateUserProfileInformationTest {
 
 
     @Test
+    //This test is to see if the Age will store properly
     public void getAgeTest(){
         String expected = "20";
         String actual = update.getAge();
@@ -46,6 +51,7 @@ public class UpdateUserProfileInformationTest {
 
 
     @Test
+    //This test is to see if the Current city will store properly
     public void getHCurrentCityTest(){
         String expected = "Detroit";
         String actual = update.getCurrentCity();
@@ -55,6 +61,7 @@ public class UpdateUserProfileInformationTest {
 
 
     @Test
+    //This test is to see if the language will store properly
     public void getLanguageTest(){
         String expected = "English";
         String actual = update.getLanguage();
@@ -64,6 +71,7 @@ public class UpdateUserProfileInformationTest {
 
 
     @Test
+    //This test is to see if the important thing will store properly
     public void getImportantThingTest(){
         String expected = "I love dogs!";
         String actual = update.getImportantThing();

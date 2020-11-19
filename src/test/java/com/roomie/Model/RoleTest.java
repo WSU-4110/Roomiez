@@ -9,6 +9,7 @@ public class RoleTest {
     Role role = new Role("User");
 
     @Test
+    //This test is to see if the role will store properly
     public void getRoleTest() {
         String expected = "User";
         String actual = role.getName();
