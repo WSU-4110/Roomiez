@@ -1,14 +1,18 @@
 package com.roomie.Web;
 
 import com.roomie.model.UpdateUserProfileInformation;
+import com.roomie.web.UpdateUserProfileInformationDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class UpdateUserProfileInformationDtoTest {
 
-    UpdateUserProfileInformation userProfileInformation = new UpdateUserProfileInformation("headline", "doctor", "facebook",
+    UpdateUserProfileInformationDto userProfileInformation = new UpdateUserProfileInformationDto("headline", "doctor", "facebook",
             "20", "Detroit", "English", "I love dogs!");
 
+    UpdateUserProfileInformationDto update2 = new UpdateUserProfileInformationDto
+            ("ME", "programmer", "insta",
+                    "30", "Chicago", "Spanish", "I love WSU");
 
     @Test
     //This test is to see if the headline will store properly
@@ -17,6 +21,7 @@ public class UpdateUserProfileInformationDtoTest {
         String actual = userProfileInformation.getHeadLine();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("ME", update2.getHeadLine());
     }
 
 
@@ -27,6 +32,7 @@ public class UpdateUserProfileInformationDtoTest {
         String actual = userProfileInformation.getProfession();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("programmer", update2.getProfession());
     }
 
     @Test
@@ -36,6 +42,7 @@ public class UpdateUserProfileInformationDtoTest {
         String actual = userProfileInformation.getSocialMedia();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("insta", update2.getSocialMedia());
     }
 
 
@@ -46,16 +53,18 @@ public class UpdateUserProfileInformationDtoTest {
         String actual = userProfileInformation.getAge();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("30", update2.getAge());
     }
 
 
     @Test
     //This test is to see if the current city will store properly
-    public void getHCurrentCityTest(){
+    public void getCurrentCityTest(){
         String expected = "Detroit";
         String actual = userProfileInformation.getCurrentCity();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("Chicago", update2.getCurrentCity());
     }
 
 
@@ -66,6 +75,7 @@ public class UpdateUserProfileInformationDtoTest {
         String actual = userProfileInformation.getLanguage();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("Spanish", update2.getLanguage());
     }
 
 
@@ -76,5 +86,6 @@ public class UpdateUserProfileInformationDtoTest {
         String actual = userProfileInformation.getImportantThing();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("I love WSU", update2.getImportantThing());
     }
 }

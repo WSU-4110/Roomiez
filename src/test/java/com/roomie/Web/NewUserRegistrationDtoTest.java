@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 public class NewUserRegistrationDtoTest {
 
     NewUserRegistrationDto registrationDto = new NewUserRegistrationDto("Kelly", "Maisel", "email", "password");
-
+    NewUserRegistrationDto registrationDto1 = new NewUserRegistrationDto("John", "Smith", "email", "1234");
     @Test
     //This test is to see if the first name will store properly
     public void firstNameDtoTest(){
@@ -15,6 +15,8 @@ public class NewUserRegistrationDtoTest {
        String actual = registrationDto.getFirstName();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("John", registrationDto1.getFirstName());
+
     }
 
     @Test
@@ -24,6 +26,7 @@ public class NewUserRegistrationDtoTest {
         String actual = registrationDto.getLastName();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("Smith", registrationDto1.getLastName());
 
     }
 
@@ -34,6 +37,7 @@ public class NewUserRegistrationDtoTest {
         String actual = registrationDto.getEmail();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("email", registrationDto1.getEmail());
 
     }
 
@@ -44,6 +48,8 @@ public class NewUserRegistrationDtoTest {
         String actual = registrationDto.getPassword();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("1234", registrationDto1.getPassword());
+
 
     }
 }

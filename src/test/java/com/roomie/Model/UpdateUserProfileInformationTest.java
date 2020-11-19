@@ -10,6 +10,10 @@ public class UpdateUserProfileInformationTest {
             ("headline", "doctor", "facebook",
                     "20", "Detroit", "English", "I love dogs!");
 
+    UpdateUserProfileInformation update2 = new UpdateUserProfileInformation
+            ("ME", "programmer", "insta",
+                    "30", "Chicago", "Spanish", "I love WSU");
+
     @Test
     //This test is to see if the headline will store properly
     public void getHeadlineTest(){
@@ -17,6 +21,7 @@ public class UpdateUserProfileInformationTest {
         String actual = update.getHeadLine();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("ME", update2.getHeadLine());
     }
 
 
@@ -27,6 +32,7 @@ public class UpdateUserProfileInformationTest {
         String actual = update.getProfession();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("programmer", update2.getProfession());
     }
 
     @Test
@@ -37,6 +43,7 @@ public class UpdateUserProfileInformationTest {
         String actual = update.getSocialMedia();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("insta", update2.getSocialMedia());
     }
 
 
@@ -47,16 +54,18 @@ public class UpdateUserProfileInformationTest {
         String actual = update.getAge();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("30", update2.getAge());
     }
 
 
     @Test
     //This test is to see if the Current city will store properly
-    public void getHCurrentCityTest(){
+    public void getCurrentCityTest(){
         String expected = "Detroit";
         String actual = update.getCurrentCity();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("Chicago", update2.getCurrentCity());
     }
 
 
@@ -67,6 +76,7 @@ public class UpdateUserProfileInformationTest {
         String actual = update.getLanguage();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("Spanish", update2.getLanguage());
     }
 
 
@@ -77,6 +87,7 @@ public class UpdateUserProfileInformationTest {
         String actual = update.getImportantThing();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("I love WSU", update2.getImportantThing());
     }
 
 }

@@ -7,14 +7,17 @@ import org.junit.jupiter.api.Test;
 public class NewUserTest {
 
         NewUser newUser = new NewUser("Kelly", "Maisel", "maiselkelly@gmail.com", "password");
+        NewUser newUser1 = new NewUser("John", "Smith", "email@gmail.com", "1234");
 
-        @Test
+
+    @Test
         //This test is to see if the first name will store properly
         public void getFirstNameTest(){
             String expected = "Kelly";
             String actual = newUser.getFirstName();
 
-            Assertions.assertEquals( expected, actual);
+            Assertions.assertEquals(expected, actual);
+            Assertions.assertEquals("John", newUser1.getFirstName());
         }
 
         @Test
@@ -24,6 +27,7 @@ public class NewUserTest {
             String actual = newUser.getLastName();
 
             Assertions.assertEquals(expected, actual);
+            Assertions.assertEquals("Smith", newUser1.getLastName());
         }
 
         @Test
@@ -33,6 +37,8 @@ public class NewUserTest {
             String actual = newUser.getEmail();
 
             Assertions.assertEquals(expected, actual);
+            Assertions.assertEquals("email@gmail.com", newUser1.getEmail());
+
         }
 
         @Test
@@ -42,6 +48,8 @@ public class NewUserTest {
             String actual = newUser.getPassword();
 
             Assertions.assertEquals(expected, actual);
+            Assertions.assertEquals("1234", newUser1.getPassword());
+
         }
 
 

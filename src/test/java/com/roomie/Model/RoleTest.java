@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 public class RoleTest {
 
     Role role = new Role("User");
+    Role role1 = new Role("Admin");
 
     @Test
     //This test is to see if the role will store properly
@@ -15,5 +16,6 @@ public class RoleTest {
         String actual = role.getName();
 
         Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals("Admin", role1.getName());
     }
 }
