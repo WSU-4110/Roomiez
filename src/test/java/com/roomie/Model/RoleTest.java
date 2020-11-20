@@ -4,6 +4,7 @@ import com.roomie.model.Role;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+//Tests adding a new role
 public class RoleTest {
 
     Role role = new Role("User");

@@ -4,6 +4,7 @@ import com.roomie.model.UpdateUserProfileInformation;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+//Tests updating profile information
 public class UpdateUserProfileInformationTest {
 
     UpdateUserProfileInformation update = new UpdateUserProfileInformation
