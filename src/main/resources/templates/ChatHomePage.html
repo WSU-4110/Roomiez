@@ -25,17 +25,22 @@
     <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
     <li><a href="/UpdateUserProfile">Edit Profile</a></li>
     <li><a href="/PotentialMatches">Search for Matches</a></li>
-    <li><a href="/Settings">Settings</a></li>
+    <li><a href="/Settings">Help Bar</a></li>
     <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
 </ul>
 
 
-<div class="registrationcontainer">
-
-<img class="chatlogo" src="/Images/images/RoomiezChat.png"/>
-    <h1>Chat with Potential Roomiez</h1>
-
-
+    <div class="chatwallbox">
+    <form>
+        <div class="chatwalltext">
+            <input type="text" name="posting" rows="5" cols="15" placeholder="What are you thinking about..">
+        </div>
+        <br>
+        <br>
+        <div class="alignbutton">
+            <input type="submit" class="regbutton" id="postbutton" value="Post" align="center">
+        </div>
+    </form>
 </div>
 </body>
 </html>
