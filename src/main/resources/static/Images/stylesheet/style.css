@@ -270,3 +270,37 @@ li a:hover:not(.active) {
   text-align: left;
   color: #5e97d4;
 }
+
+.chatwallbox{
+  width:500px;
+  position:absolute;
+  background: #e7e9f3;
+  font-size:40px;
+  top:35%;
+  left:35%;
+  color:#5e97d4;
+}
+
+.chatwalltext{
+  width:100%;
+  overflow:hidden;
+  font-size:40px;
+  margin:8px 0;
+  border: 10px solid #e7e9f3;
+
+}
+.chatwalltext i{
+  width:26px;
+  float:left;
+  text-align:center;
+}
+.chatwalltext input{
+  border:none;
+  outline: none;
+  background: #e7e9f3;
+  color: #5e97d4;
+  font-size: 25px;
+  width: 100%;
+  float: left;
+  margin: 10px;
+}
