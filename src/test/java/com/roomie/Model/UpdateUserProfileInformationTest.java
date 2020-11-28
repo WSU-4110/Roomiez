@@ -2,6 +2,7 @@ package com.roomie.Model;
 
 import com.roomie.model.UpdateUserProfileInformation;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 //Tests updating profile information
@@ -82,6 +83,7 @@ public class UpdateUserProfileInformationTest {
 
 
     @Test
+    @DisplayName("Testing Important Thing")
     //This test is to see if the important thing will store properly
     public void getImportantThingTest(){
         String expected = "I love dogs!";

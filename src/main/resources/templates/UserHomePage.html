@@ -26,7 +26,7 @@
     <li><a href="/aboutmeForm">Edit Profile</a></li>
     <li><a href="/PotentialMatches">Search for Matches</a></li>
     <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
-    <li><a href="/Settings">Settings</a></li>
+    <li><a href="/HelpBar">Help Bar</a></li>
     <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></form></li>
 </ul>
 
@@ -108,10 +108,25 @@
 
 <hr>
 <h1>[[${#httpServletRequest.remoteUser}]]'s Wall</h1>
+<h2>Post something to [[${#httpServletRequest.remoteUser}]]'s Wall</h2>
+<br>
+<br>
+<form action="#" th:action="@{/surveyResults}" th:object= "${wallpost}"  method="post">
+    <div class="user_form">
+        <textarea rows="4" cols="100%" name="comment"  th:field="*{wallPost}" placeholder="What are you thinking..."></textarea>
+    </div>
+    <br>
+    <br>
+    <div class="alignbutton">
+        <input type="submit" class="regbutton" id="postbutton" value="Post" align="center">
+    </div>
+</form>
+
 
 <br>
 <br>
 <br>
 </div>
+
 </body>
 </html>

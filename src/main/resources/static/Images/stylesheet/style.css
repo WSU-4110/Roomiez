@@ -298,3 +298,31 @@ li a:hover:not(.active) {
   background: #ccc;
 }
 
+
+
+.user_form {
+  width:100%;
+  height:100%;
+  background: #EEE;
+  padding:15px;
+  margin-bottom: 10px;
+  border: #CCC solid 1px;
+  text-align: center;
+  -moz-border-radius: 15px;
+}
+
+.user_form form {
+  /* center all the inputs in a form */
+  text-align: center;
+
+  /* how to center the whole form*/
+  width:100%;
+  height:100%;
+  margin: 0 auto;
+  background: #ffe;
+}
+
+.user_form span {
+  /* reset text-alignment in the inputs */
+  text-align: left;
+}
