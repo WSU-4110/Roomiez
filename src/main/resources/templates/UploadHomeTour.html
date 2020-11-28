@@ -1,50 +1,67 @@
-package com.roomie.fileio;
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Roomiez :: Upload Home Tour</title>
+    <link rel="stylesheet" href="/Images/stylesheet/style.css">
+</head>
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.Arrays;
+<div class="header">
 
-@Controller
+    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
 
-public class FileController {
+    <div class="links">
+        <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
+        <a href="https://www.twitter.com"><img class="twitter" src="/Images/images/twitter.png"/></a>
+        <a href="https://www.instagram.com"><img class="insta" src="/Images/images/insta.jpeg"/></a>
 
-final
-FileService fileService;
+    </div>
+</div>
 
-public FileController(FileService fileService) {
-this.fileService = fileService;
-}
+<body>
+<hr>
 
-@GetMapping("/")
-public String index() {
-return "upload";
-}
+<ul>
+    <li><a href="/templates/UserHomePage.html">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li><a href="/HomeTour">View Home Tour</a></li>
+    <li style="float:right">
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Log Out"></form>
+    </li>
 
-@PostMapping("/uploadFile")
-public String uploadFile(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
+</ul>
 
-fileService.uploadFile(file);
 
-redirectAttributes.addFlashAttribute("message",
-"You successfully uploaded " + file.getOriginalFilename() + "!");
+<div class="homeh1">
+    <h1>Find your Roomiez Home Tour Video here!</h1>
+</div>
 
-return "redirect:/";
-}
 
-@PostMapping("/uploadFiles")
-public String uploadFiles(@RequestParam("files") MultipartFile[] files, RedirectAttributes redirectAttributes) {
+<h1>Spring Boot File Upload Example</h1>
 
-Arrays.stream(files)
-.forEach(fileService::uploadFile);
+<hr/>
 
-redirectAttributes.addFlashAttribute("message",
-"You successfully uploaded all files!");
+<h4>Upload Single Home Tour File:</h4>
+<form method="POST" th:action="@{/uploadFile}" enctype="multipart/form-data">
+    <input type="file" name="file"/> <br/><br/>
+    <button type="submit">Submit</button>
+</form>
 
-return "redirect:/";
-}
-}
+<hr/>
+
+<h4>Upload Multiple Home Tour Files:</h4>
+<form method="POST" th:action="@{/uploadFiles}" enctype="multipart/form-data">
+    <input type="file" name="files" multiple/> <br/><br/>
+    <button type="submit">Submit</button>
+</form>
+
+<hr/>
+
+<div th:if="${message}">
+    <h2 th:text="${message}"/>
+</div>
+
+
+</body>
+</html>
