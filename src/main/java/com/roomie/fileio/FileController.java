@@ -22,7 +22,7 @@ public class FileController {
 
     @GetMapping("/")
     public String index() {
-        return "upload";
+        return "UploadHomeTour";
     }
 
     @PostMapping("/uploadFile")
