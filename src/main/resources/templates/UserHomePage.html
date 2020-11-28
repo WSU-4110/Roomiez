@@ -20,7 +20,7 @@
 </div>
 
 
-<body>
+<div>
 <hr>
 <ul>
     <li><a href="/aboutmeForm">Edit Profile</a></li>
@@ -126,7 +126,9 @@
 <br>
 <br>
 <h2>Most Recent Posts:</h2>
-<p th:text="${wallpostresults.wallPost}" />
+<div th:each="post : ${posts}">
+<p th:text="${post.wallPost}" />
+</div>
 <br>
 </div>
 

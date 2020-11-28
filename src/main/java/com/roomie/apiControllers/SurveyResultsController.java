@@ -8,6 +8,7 @@ import com.roomie.service.UpdateUserProfileInformationService;
 import com.roomie.service.UserSurveyResultsService;
 import com.roomie.service.WallPostService;
 import com.roomie.web.WallPostDto;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,17 +43,17 @@ public class SurveyResultsController {
 
 
     @GetMapping
-    public String getSurveyStuff(Model model){
+    public String getSurveyStuff(Model model, Authentication authentication){
         UserSurveyResults surveyResults = userSurveyResultsService.get((long) 7);
         model.addAttribute("results", surveyResults);
 
-        UpdateUserProfileInformation basicInfoResults = updateUserProfileInformationService.get((long) 3);
+        UpdateUserProfileInformation basicInfoResults = updateUserProfileInformationService.getByUserId((long) 8);
         model.addAttribute("basicinforesults", basicInfoResults);
 
         model.addAttribute("wallpost",new WallPostDto());
 
-        WallPost wallPost = wallPostService.get((long) 10);
-        model.addAttribute("wallpostresults", wallPost);
+        Iterable<WallPost> posts = wallPostService.findAll();
+        model.addAttribute("posts", posts);
 
 
         return "UserHomePage";
