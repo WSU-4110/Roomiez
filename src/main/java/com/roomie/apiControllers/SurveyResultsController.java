@@ -51,7 +51,7 @@ public class SurveyResultsController {
 
         model.addAttribute("wallpost",new WallPostDto());
 
-        WallPost wallPost = wallPostService.get((long) 2);
+        WallPost wallPost = wallPostService.get((long) 10);
         model.addAttribute("wallpostresults", wallPost);
 
 
