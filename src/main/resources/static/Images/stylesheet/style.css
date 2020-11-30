@@ -66,19 +66,30 @@ h2{
 }
 
 img.roomiez{
-  width: 200px;
-  height: 50px;
+  width: auto;
+  height: 30px;
   text-align: left;
   vertical-align: middle;
 }
 
 .facebook, .twitter, .insta{
-  width: 70px;
-  height: 50px;
+  width: auto;
+  height: 30px;
   text-align: right;
   float: right;
   padding-left: 20px;
   vertical-align: middle;
+}
+/* this would make the roomiez logo and social medial links responsive */
+
+@media screen and (min-width: 430px) {
+  .facebook, .twitter, .insta{
+    height: 50px;
+  }
+
+  img.roomiez{
+    height: 50px;
+  }
 }
 
 .chatlogo{
