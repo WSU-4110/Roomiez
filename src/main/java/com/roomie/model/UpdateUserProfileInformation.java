@@ -31,6 +31,12 @@ public class UpdateUserProfileInformation {
     @Column(name = "importantthing")
     private String importantThing;
 
+    @OneToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private NewUser user;
+
+
+
     public UpdateUserProfileInformation() {
     }
 

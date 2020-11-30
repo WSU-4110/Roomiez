@@ -8,4 +8,6 @@ public interface UpdateUserProfileInformationService {
     UpdateUserProfileInformation save(UpdateUserProfileInformationDto updateUserProfileInformationDto);
 
     UpdateUserProfileInformation get(Long id);
+
+    UpdateUserProfileInformation getByUserId(Long userId);
 }

@@ -20,7 +20,7 @@
 </div>
 
 
-<body>
+<div>
 <hr>
 <ul>
     <li><a href="/aboutmeForm">Edit Profile</a></li>
@@ -115,8 +115,7 @@
     <div class="user_form">
         <textarea rows="4" cols="100%" name="comment"  th:field="*{wallPost}" placeholder="What are you thinking..."></textarea>
     </div>
-    <br>
-    <br>
+
     <div class="alignbutton">
         <input type="submit" class="regbutton" id="postbutton" value="Post" align="center">
     </div>
@@ -125,8 +124,17 @@
 
 <br>
 <br>
-<h2>Most Recent Posts:</h2>
-<p th:text="${wallpostresults.wallPost}" />
+<h1>Most Recent Posts:</h1>
+<h2>Check it out!</h2>
+<br>
+
+
+
+<div class="rcorners">
+<tr th:each="post : ${posts}">
+    <td><div class="wallpost" th:text="${post.wallPost}" ></div></td>
+</tr>
+</div>
 <br>
 </div>
 

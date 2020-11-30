@@ -26,4 +26,10 @@ public class WallPostImpl implements WallPostService{
     public WallPost get(Long id) {
         return wallPostRepository.findById(id).get();
     }
+
+
+    @Override
+    public Iterable<WallPost> findAll() {
+        return wallPostRepository.findAll();
+    }
 }

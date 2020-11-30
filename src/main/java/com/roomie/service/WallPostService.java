@@ -8,4 +8,6 @@ public interface WallPostService {
     WallPost save(WallPostDto wallPostDto);
 
     WallPost get(Long id);
+
+    Iterable<WallPost> findAll();
 }
