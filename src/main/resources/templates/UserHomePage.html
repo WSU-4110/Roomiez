@@ -63,6 +63,8 @@
         <br>
     </div>
 
+
+    <h2>Click <a th:href="@{/HomeTour}">here</a> for [[${#httpServletRequest.remoteUser}]]'s Home Tour!</h2>
 <hr>
     <h1>[[${#httpServletRequest.remoteUser}]]'s Preferences</h1>
 
@@ -134,6 +136,9 @@
 <tr th:each="post : ${posts}">
     <td><div class="wallpost" th:text="${post.wallPost}" ></div></td>
 </tr>
+
+
+
 </div>
 <br>
 </div>

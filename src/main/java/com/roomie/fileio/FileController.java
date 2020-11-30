@@ -20,7 +20,7 @@ public class FileController {
         this.fileService = fileService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/hometour")
     public String index() {
         return "UploadHomeTour";
     }
@@ -33,7 +33,7 @@ public class FileController {
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
 
-        return "redirect:/";
+        return "redirect:/hometour?success";
     }
 
     @PostMapping("/uploadFiles")
@@ -45,6 +45,6 @@ public class FileController {
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded all files!");
 
-        return "redirect:/";
+        return "redirect:/hometour?success";
     }
 }

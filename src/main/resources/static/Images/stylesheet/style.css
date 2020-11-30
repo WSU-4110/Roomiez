@@ -2,12 +2,19 @@
   box-sizing: border-box;
 }
 
-
-.homeh1{
+.mainPage{
   margin-bottom: 0;
   font: 100px;
   font-family: Rockwell;
   font: bold;
+  color: black;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.homeh1{
+  margin-bottom: 0;
+  font-family: Rockwell;
   color: black;
   text-align: center;
   padding-top: 50px;
@@ -18,7 +25,7 @@ h1{
   font: 100px;
   font-family: Rockwell;
   font: bold;
-  color: black;
+  color: red;
   text-align: center;
   padding-top: 50px;
 }
@@ -355,7 +362,5 @@ li a:hover:not(.active) {
   padding-left: 20px;
   background: #CCCCCC;
 }
-
-
 
 
