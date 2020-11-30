@@ -29,12 +29,6 @@ public class UserSurveyFormController {
     }
 
 
-//    @GetMapping
-//    public String showUpdateSurveyResults(Model model){
-//        model.addAttribute("update", new UserSurveyResultsDto());
-//        return "updateUserProfile";
-//    }
-
     @PostMapping
     public String postUpdateSurveyResults(@ModelAttribute("update") UserSurveyResultsDto userSurveyResultsDto){
         userSurveyResultsService.save(userSurveyResultsDto);

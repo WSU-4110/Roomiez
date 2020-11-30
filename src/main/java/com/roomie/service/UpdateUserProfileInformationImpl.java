@@ -1,6 +1,7 @@
 package com.roomie.service;
 
 import com.roomie.Repository.UpdateUserProfileInformationRepository;
+import com.roomie.model.NewUser;
 import com.roomie.model.UpdateUserProfileInformation;
 import com.roomie.web.UpdateUserProfileInformationDto;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,4 +32,10 @@ public class UpdateUserProfileInformationImpl implements UpdateUserProfileInform
     public UpdateUserProfileInformation get(Long id){
         return updateUserProfileInformationRepository.findById(id).get();
     }
+
+    @Override
+    public UpdateUserProfileInformation getByUserId(Long userId){
+        return updateUserProfileInformationRepository.getByUserId(userId);
+    }
+
 }

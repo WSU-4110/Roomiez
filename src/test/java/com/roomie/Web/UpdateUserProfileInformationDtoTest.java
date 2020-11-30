@@ -5,6 +5,8 @@ import com.roomie.web.UpdateUserProfileInformationDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
+//Tests adding profile information to the DTO
 public class UpdateUserProfileInformationDtoTest {
 
     UpdateUserProfileInformationDto userProfileInformation = new UpdateUserProfileInformationDto("headline", "doctor", "facebook",

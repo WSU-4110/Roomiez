@@ -4,6 +4,7 @@ import com.roomie.model.NewUser;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+//Tests adding a new user
 public class NewUserTest {
 
         NewUser newUser = new NewUser("Kelly", "Maisel", "maiselkelly@gmail.com", "password");

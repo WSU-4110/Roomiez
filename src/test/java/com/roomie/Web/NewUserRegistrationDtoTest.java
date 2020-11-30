@@ -4,6 +4,7 @@ import com.roomie.web.NewUserRegistrationDto;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+//Tests adding a new user to the DTO
 public class NewUserRegistrationDtoTest {
 
     NewUserRegistrationDto registrationDto = new NewUserRegistrationDto("Kelly", "Maisel", "email", "password");

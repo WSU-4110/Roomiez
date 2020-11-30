@@ -36,7 +36,9 @@
     </div>
     <li><a href="/surveyResults">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
     <div class="searchbar">
-    <form action="/action_page.php">
+
+<!-- Needs to connect to database-->
+    <form action="/surveyResults">
         <input type="text" placeholder="Search by username" name="search">
         <button type="submit">Search!</button>
     </form>
