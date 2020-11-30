@@ -1,6 +1,7 @@
 package com.roomie.apiControllers;
 
 
+import com.roomie.model.NewUser;
 import com.roomie.model.UpdateUserProfileInformation;
 import com.roomie.model.UserSurveyResults;
 import com.roomie.model.WallPost;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.security.Principal;
 
 @Controller
 @RequestMapping("/surveyResults")
@@ -43,10 +46,11 @@ public class SurveyResultsController {
 
 
     @GetMapping
-    public String getSurveyStuff(Model model, Authentication authentication){
+    public String getSurveyStuff(Model model, Principal principal){
         UserSurveyResults surveyResults = userSurveyResultsService.get((long) 7);
         model.addAttribute("results", surveyResults);
 
+//        NewUser user = (NewUser)principal;
         UpdateUserProfileInformation basicInfoResults = updateUserProfileInformationService.getByUserId((long) 8);
         model.addAttribute("basicinforesults", basicInfoResults);
 

@@ -326,3 +326,36 @@ li a:hover:not(.active) {
   /* reset text-alignment in the inputs */
   text-align: left;
 }
+
+
+.wallpost:nth-child(even){
+  font-family: "American Typewriter";
+  display: inline-block;
+  border-radius: 25px;
+  border: 2px solid black;
+  width:100%;
+  height:100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background: #EEEEEE;
+}
+
+.wallpost:nth-child(odd){
+  font-family: "American Typewriter";
+  display: inline-block;
+  border-radius: 25px;
+  border: 2px solid black;
+  width:100%;
+  height:100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background: #CCCCCC;
+}
+
+
+
+
