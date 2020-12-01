@@ -80,7 +80,7 @@ img.roomiez{
   padding-left: 20px;
   vertical-align: middle;
 }
-/* this would make the roomiez logo and social medial links responsive */
+/* this would make the roomiez logo and social medial links responsive - MRU*/
 
 @media screen and (min-width: 430px) {
   .facebook, .twitter, .insta{
@@ -292,7 +292,7 @@ li a:hover:not(.active) {
   color:#5e97d4;
 }
 
-/* this would make the roomiez logo and social medial links responsive */
+/* this would make the roomiez logo and social medial links responsive -MRU */
 
 .chatwalltext{
   width:100%;
