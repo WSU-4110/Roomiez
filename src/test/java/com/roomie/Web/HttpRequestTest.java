@@ -37,7 +37,7 @@ public class HttpRequestTest {
                 "\n" +
                 "        <img class=\"roomiez\" src=\"/Images/images/Roomiez.png\"/>\n" +
                 "\n" +
-                "        <div class=\"links\">\n" +
+                "        <div class=\"links\" style=\"max-width:100%;overflow:auto;height:auto\">\n" +
                 "            <a href=\"https://www.facebook.com\"><img class=\"facebook\" src=\"/Images/images/facebook.png\"/></a>\n" +
                 "\n" +
                 "            <a href=\"https://www.twitter.com\"><img class=\"twitter\" src=\"/Images/images/twitter.png\"/></a>\n" +
