@@ -66,19 +66,30 @@ h2{
 }
 
 img.roomiez{
-  width: 200px;
-  height: 50px;
+  width: auto;
+  height: 30px;
   text-align: left;
   vertical-align: middle;
 }
 
 .facebook, .twitter, .insta{
-  width: 70px;
-  height: 50px;
+  width: auto;
+  height: 30px;
   text-align: right;
   float: right;
   padding-left: 20px;
   vertical-align: middle;
+}
+/* this would make the roomiez logo and social medial links responsive - MRU*/
+
+@media screen and (min-width: 430px) {
+  .facebook, .twitter, .insta{
+    height: 50px;
+  }
+
+  img.roomiez{
+    height: 50px;
+  }
 }
 
 .chatlogo{
@@ -165,7 +176,7 @@ a:active {
 
 .loginbox{
   width:280px;
-  position:absolute;
+  position:sticky;
   font-size:20px;
   top:35%;
   left:40%;
@@ -272,14 +283,16 @@ li a:hover:not(.active) {
 }
 
 .chatwallbox{
-  width:500px;
-  position:absolute;
+  width:auto;
+  position:sticky;
   background: #e7e9f3;
   font-size:40px;
   top:35%;
   left:35%;
   color:#5e97d4;
 }
+
+/* this would make the roomiez logo and social medial links responsive -MRU */
 
 .chatwalltext{
   width:100%;
@@ -303,4 +316,13 @@ li a:hover:not(.active) {
   width: 100%;
   float: left;
   margin: 10px;
+}
+
+@media screen and (min-width: 430px) {
+  .chatwallbox{
+    position:-webkit-sticky;
+    font-size:40px;
+    top:35%;
+    left:35%;
+  }
 }
