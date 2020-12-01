@@ -25,12 +25,14 @@ public class HttpRequestTest {
                 String.class)).contains("<!DOCTYPE html>\n" +
                 "<html>\n" +
                 "<head>\n" +
+                "    <meta name=\"viewport\" content=\"width=device-width\">\n" +
+                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n" +
                 "    <title>Roomiez</title>\n" +
                 "    <link rel=\"stylesheet\" href=\"/Images/stylesheet/style.css\">\n" +
                 "\n" +
                 "</head>\n" +
                 "\n" +
-                "<div class=\"header\">\n" +
+                "<div class=\"header\" style=\"max-width:100%;overflow:auto;height:auto\">\n" +
                 "\n" +
                 "\n" +
                 "        <img class=\"roomiez\" src=\"/Images/images/Roomiez.png\"/>\n" +
@@ -51,7 +53,7 @@ public class HttpRequestTest {
                 "<div class=\"mainpagecontainer\">\n" +
                 "\n" +
                 "<div class=\"homeh1\">\n" +
-                "    <h1>Find your roomie today!</h1>\n" +
+                "    <h1 style=\"color:black\">Find your roomie today!</h1>\n" +
                 "</div>\n" +
                 "\n" +
                 "\n" +
@@ -82,7 +84,9 @@ public class HttpRequestTest {
                 "\n" +
                 "</div>\n" +
                 "</body>\n" +
-                "</html>");
+                "</html>\n");
     }
 
 }
+
+
