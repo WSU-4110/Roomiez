@@ -12,13 +12,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class NewMemberDaysController {
 
     @GetMapping("/SearchNewMembers")
-    public String addRadiusSubmit(Model model){
+    public String addTimeSubmit(Model model){
         model.addAttribute("newMemberDays", new NewMemberDays());
         return "SearchNewMember";
     }
 
     @PostMapping("/SearchNewMembers")
-    public String addRadiusForm(@ModelAttribute NewMemberDays newMemberDays, Model model){
+    public String addTimeForm(@ModelAttribute NewMemberDays newMemberDays, Model model){
         model.addAttribute("newMemberDays", newMemberDays);
         return "SearchNewMember";
     }

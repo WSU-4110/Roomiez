@@ -7,6 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class RoomieAppApplicationTests {
 
 	@Test
+		//This test is to see if the Roomie Application will run successfully
 	void contextLoads() {
 	}
 

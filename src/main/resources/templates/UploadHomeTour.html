@@ -1,21 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-
-    <!--
-   this codes was to make the website responsive
-
-   <meta name="viewport" content="width=device-width">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   and
-   style="max-width:100%;overflow:auto;height:auto
-
-   -- MRU
-    -->
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
     <title>Roomiez :: Upload Home Tour</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
@@ -42,6 +30,7 @@
 <ul>
     <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
     <li><a href="/HomeTour">View Home Tour</a></li>
+    <li><a href="/HelpBar">Help Bar</a></li>
     <li style="float:right">
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Log Out"></form>
@@ -71,10 +60,6 @@
 </form>
 
 <hr/>
-
-<div th:if="${message}">
-    <h2 th:text="${message}"/>
-</div>
 
 
 </body>

@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <!--
-    this codes was to make the website responsive
-
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    and
-    style="max-width:100%;overflow:auto;height:auto
-
-    -- MRU
-     -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roomiez :: Searching by Online</title>
+    <title>Roomiez :: Settings</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
 
 </head>
 
 <div class="header" style="max-width:100%;overflow:auto;height:auto">
 
-    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png" alt="Roomiez logo"/></a>
+    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
 
     <div class="links" style="max-width:100%;overflow:auto;height:auto">
         <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
@@ -37,33 +25,35 @@
 <hr>
 <ul>
     <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
-    <li><a href="/UpdateUserProfile">Edit Profile</a></li>
+    <li><a href="/aboutmeForm">Edit Profile</a></li>
     <li><a href="/PotentialMatches">Search for Matches</a></li>
     <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
     <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
 </ul>
 
 
+
+
 <div class="registrationcontainer">
-<div class="loginbox">
-    <form action="mailto:ashrity@gmail.com"
-          method="post"
-          enctype="application/x-www-form-urlencoded"
-          name="Email">
-        <div class="logintext">
-            <input type="text" name="help"  placeholder="Ask a Question!" required><br>
-        </div>
-        <br>
-        <br>
-        <div class="alignbutton">
-            <input type="submit" class="regbutton" id="signupbutton" value="Submit" align="center">
-        </div>
 
+    <h1>Welcome [[${#httpServletRequest.remoteUser}]]!</h1>
+    <h2>Have a question? Send us a message!</h2>
 
-    </form>
-</div>
-
-
+        <form action="mailto:maiselkelly@gmail.com"
+              method="post"
+              enctype="text/plain"
+              name="Email">
+            <label><h2>Add Your Name Here:</h2></label><br>
+            <input type="text" name="name" placeholder="Name:" required><br>
+            <label><h2>Add Your E-mail Here:</h2></label><br>
+            <input type="text" name="mail" placeholder="Email:" required><br>
+            <label><h2>Add Your Message Here</h2></label><br>
+            <textarea rows="4" cols="50" name="comment"  placeholder="Ask a question!" required></textarea>
+            <br>
+            <input type="submit" value="Ask Away!">
+            <input type="reset" value="Reset!">
+        </form>
+    </div>
 
 
 </div>

@@ -1,20 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <!--
-    this codes was to make the website responsive
-
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    and
-    style="max-width:100%;overflow:auto;height:auto
-
-    -- MRU
-     -->
-    <meta name="viewport" content="width=device-width">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roomiez :: Home Tour</title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
 </head>
@@ -23,6 +12,7 @@
 <div class="header" style="max-width:100%;overflow:auto;height:auto">
 
     <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png" alt="Roomiez logo"/></a>
+
 
     <div class="links" style="max-width:100%;overflow:auto;height:auto">
         <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
@@ -37,6 +27,7 @@
 
 <ul>
     <li><a href="/UserHomePage">[[${#httpServletRequest.remoteUser}]]'s Home Page</a></li>
+    <li><a href="/HelpBar">Help Bar</a></li>
     <li style="float:right">
         <form th:action="@{/logout}" method="post">
             <input type="submit" value="Log Out"></form>
@@ -45,16 +36,18 @@
 
 
 <div class="homeh1">
-    <h1>Find your Roomiez Home Tour Video here!</h1>
+    <h1>Find [[${#httpServletRequest.remoteUser}]]'s Home Tour Video here!</h1>
+
+    <br>
+    <br>
+    <video width="400" height="400" controls muted >
+        <source src="/Images/images/hometour.mp4" type="video/mp4">
+        Your browser does not support HTML video.
+    </video>
+
+
 </div>
 
-<div>
-
-        <img class="searchbuttons1" src="/Images/images/HomeTour_1.jpg" alt="Example home tour picture one"/></a>
-        <img class="searchbuttons" src="/Images/images/HomeTour_2.jpg" alt="Example home tour picture two"/></a>
-        <img class="searchbuttons1" src="/Images/images/HomeTour_3.jpg" alt="Example home tour picture three"/></a>
-
-</div>
 
 
 </body>

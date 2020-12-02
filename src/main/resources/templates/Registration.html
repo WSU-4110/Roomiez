@@ -1,18 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://thymeleaf.org">
 <head>
-    <!--
-   this codes was to make the website responsive
-
-   <meta name="viewport" content="width=device-width">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   and
-   style="max-width:100%;overflow:auto;height:auto
-
-   -- MRU
-    -->
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roomiez :: Registration</title>
@@ -22,7 +10,9 @@
 
 <div class="header" style="max-width:100%;overflow:auto;height:auto">
 
-    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png" alt="Roomiez logo"/></a>
+
+    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
+
 
     <div class="links" style="max-width:100%;overflow:auto;height:auto">
         <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
@@ -34,6 +24,7 @@
 
 
     </div>
+
 </div>
 <body>
 
@@ -43,13 +34,14 @@
 
     <h1>CREATE AN ACCOUNT</h1>
 
+    <form action="#" th:action="@{/Registration}" th:object= "${newUser}" modelAttribute="newUser" method="post">
+
 
     <div class="row">
         <div class="column">
+            <label>First Name:</label><br>
+            <input type="text" th:field="*{firstName}"  placeholder="Enter First Name" required>
             <br>
-            <form action="#" th:action="@{/Registration}" th:object= "${registration}" method="post">
-            <label>Username:</label><br>
-            <input type="text" th:field="*{username}"  placeholder="Enter Username" required><br>
             <br>
             <label>E-mail:</label><br>
             <input type="email" th:field="*{email}" name="email" placeholder="Enter Email Address" required>
@@ -57,30 +49,29 @@
             <br>
             <label>Password:</label><br>
             <input type="password" th:field="*{password}" name="password" placeholder="Enter a Password" required>
-
         </div>
         <div class="column">
-            <br>
-            <input type="radio" name="gender" value="male">Male
-            <input type="radio" name="gender" value="female">Female
-            <input type="radio" name="gender" value="other">Prefer not to say
+            <label>Last Name:</label><br>
+            <input type="text" th:field="*{lastName}"  placeholder="Enter Last Name" required>
             <br>
             <br>
             <br>
-            <br>
-            <label for="birthday">Birthday:</label>
-            <input type="date" id="birthday" name="birthday">
-            <br>
-            <br>
+            <label>Birthday:</label>
 
+            <input type="date"  name="birthday">
+            <br>
+            <br>
         </div>
     </div>
+
+
 
     <br>
     <br>
     <div class="alignbutton">
         <input type="submit" class="regbutton" id="signupbutton" value="Create an Account" align="center">
-    </div>
+
+            </div>
     </form>
 
         <h2>Click <a th:href="@{/UserHomePage}">here</a> to log in.</h2>

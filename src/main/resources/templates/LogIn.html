@@ -1,20 +1,7 @@
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <!--
-   this codes was to make the website responsive
-
-   <meta name="viewport" content="width=device-width">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   and
-   style="max-width:100%;overflow:auto;height:auto
-
-   -- MRU
-    -->
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roomiez :: Log In</title>
@@ -24,7 +11,9 @@
 
 <div class="header" style="max-width:100%;overflow:auto;height:auto">
 
-    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png" alt="Roomiez logo"/></a>
+
+    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
+  
 
     <div class="links" style="max-width:100%;overflow:auto;height:auto">
         <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
@@ -41,6 +30,7 @@
 
 <hr>
 
+
 <div class="registrationcontainer">
 
     <h1>LOG IN TO FIND YOUR POTENTIAL ROOMIEZ</h1>
@@ -49,13 +39,14 @@
     <div class="loginbox">
 
         <div th:if="${param.error}">
-           <h2> Invalid username and password. Please try again.</h2>
+            <h2> Invalid username and password. Please try again.</h2>
         </div>
         <div th:if="${param.logout}">
             <h2>You have been logged out. See you soon!</h2>
         </div>
         <br>
-        <form th:action="@{/LogIn}"  method="post">
+
+        <form th:action="@{/login}"  method="post">
         <label>Username:</label><br>
             <div class="logintext">
                 <input type="text" name="username"  placeholder="Enter Username" required><br>
@@ -73,6 +64,7 @@
 
         <div class="alignbutton">
             <input type="submit" class="regbutton" id="signupbutton" value="Log In" align="center">
+        </div>
     </form>
 </div>
 

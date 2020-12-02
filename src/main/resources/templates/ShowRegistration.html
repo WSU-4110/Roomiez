@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Registration - Test</title>
 </head>
@@ -10,6 +12,8 @@
 <h1>Your User Information is: </h1>
 <p th:text="'username: ' + ${registration.username}" />
 <p th:text="'email: ' + ${registration.email}" />
-<p th:text="'password:' + ${registration.password}">
+<p th:text="'password:' + ${registration.password}"/>
+<p th:text="'gender:' + ${registration.gender}"/>
+<p th:text="'birthday:' + ${registration.birthday}"/>
 </body>
 </html>

@@ -2,12 +2,19 @@
   box-sizing: border-box;
 }
 
-
-.homeh1{
+.mainPage{
   margin-bottom: 0;
   font: 100px;
   font-family: Rockwell;
   font: bold;
+  color: black;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.homeh1{
+  margin-bottom: 0;
+  font-family: Rockwell;
   color: black;
   text-align: center;
   padding-top: 50px;
@@ -18,7 +25,7 @@ h1{
   font: 100px;
   font-family: Rockwell;
   font: bold;
-  color: black;
+  color: red;
   text-align: center;
   padding-top: 50px;
 }
@@ -66,30 +73,19 @@ h2{
 }
 
 img.roomiez{
-  width: auto;
-  height: 30px;
+  width: 200px;
+  height: 50px;
   text-align: left;
   vertical-align: middle;
 }
 
 .facebook, .twitter, .insta{
-  width: auto;
-  height: 30px;
+  width: 70px;
+  height: 50px;
   text-align: right;
   float: right;
   padding-left: 20px;
   vertical-align: middle;
-}
-/* this would make the roomiez logo and social medial links responsive - MRU*/
-
-@media screen and (min-width: 430px) {
-  .facebook, .twitter, .insta{
-    height: 50px;
-  }
-
-  img.roomiez{
-    height: 50px;
-  }
 }
 
 .chatlogo{
@@ -175,8 +171,9 @@ a:active {
 }
 
 .loginbox{
+  text-align: center;
   width:280px;
-  position:sticky;
+  position:absolute;
   font-size:20px;
   top:35%;
   left:40%;
@@ -184,6 +181,7 @@ a:active {
 }
 
 .logintext{
+  text-align: center;
   width:100%;
   overflow:hidden;
   font-size:20px;
@@ -213,7 +211,6 @@ a:active {
   width: 50%;
   padding: 10px;
   text-align: center;
-
 
 }
 
@@ -279,50 +276,91 @@ li a:hover:not(.active) {
   width: 50%;
   padding: 10px;
   text-align: left;
-  color: #5e97d4;
 }
 
-.chatwallbox{
-  width:auto;
-  position:sticky;
-  background: #e7e9f3;
-  font-size:40px;
-  top:35%;
-  left:35%;
-  color:#5e97d4;
+
+
+.searchbar button {
+  padding: 8px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
 }
 
-/* this would make the roomiez logo and social medial links responsive -MRU */
 
-.chatwalltext{
+.searchbar input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font: "American Typewriter";
+  font-size: 17px;
+  border-color: lightgrey;
+}
+
+.searchbar button:hover {
+  background: #ccc;
+}
+
+
+
+.user_form {
   width:100%;
-  overflow:hidden;
-  font-size:40px;
-  margin:8px 0;
-  border: 10px solid #e7e9f3;
-
-}
-.chatwalltext i{
-  width:26px;
-  float:left;
-  text-align:center;
-}
-.chatwalltext input{
-  border:none;
-  outline: none;
-  background: #e7e9f3;
-  color: #5e97d4;
-  font-size: 25px;
-  width: 100%;
-  float: left;
-  margin: 10px;
+  height:100%;
+  background: #EEE;
+  padding:15px;
+  margin-bottom: 10px;
+  border: #CCC solid 1px;
+  text-align: center;
+  -moz-border-radius: 15px;
 }
 
-@media screen and (min-width: 430px) {
-  .chatwallbox{
-    position:-webkit-sticky;
-    font-size:40px;
-    top:35%;
-    left:35%;
-  }
+.user_form form {
+  /* center all the inputs in a form */
+  text-align: center;
+
+  /* how to center the whole form*/
+  width:100%;
+  height:100%;
+  margin: 0 auto;
+  background: #ffe;
 }
+
+.user_form span {
+  /* reset text-alignment in the inputs */
+  text-align: left;
+}
+
+
+.wallpost:nth-child(even){
+  font-family: "American Typewriter";
+  display: inline-block;
+  border-radius: 25px;
+  border: 2px solid black;
+  width:100%;
+  height:100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background: #EEEEEE;
+}
+
+.wallpost:nth-child(odd){
+  font-family: "American Typewriter";
+  display: inline-block;
+  border-radius: 25px;
+  border: 2px solid black;
+  width:100%;
+  height:100%;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  background: #CCCCCC;
+}
+
+

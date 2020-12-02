@@ -1,31 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 
 <head>
-
-    <!--
-   this codes was to make the website responsive
-
-   <meta name="viewport" content="width=device-width">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-   and
-   style="max-width:100%;overflow:auto;height:auto
-
-   -- MRU
-    -->
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Roomiez :: Welcome Home </title>
     <link rel="stylesheet" href="/Images/stylesheet/style.css">
 
 </head>
 
-<div class="header"style="max-width:100%;overflow:auto;height:auto">
+<div class="header" style="max-width:100%;overflow:auto;height:auto">
 
-    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png" alt="Roomiez logo"/></a>
+    <a href="/home"><img class="roomiez" src="/Images/images/Roomiez.png"/></a>
 
     <div class="links" style="max-width:100%;overflow:auto;height:auto">
         <a href="https://www.facebook.com"><img class="facebook" src="/Images/images/facebook.png"/></a>
@@ -36,14 +22,14 @@
 </div>
 
 
-<body>
+<div>
 <hr>
 <ul>
-    <li><a href="/UpdateUserProfile">Edit Profile</a></li>
+    <li><a href="/aboutmeForm">Edit Profile</a></li>
     <li><a href="/PotentialMatches">Search for Matches</a></li>
     <li><a href="/ChatHomePage">Chat with Roomiez</a></li>
-    <li><a href="/Settings">Help Bar</a></li>
-    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></li>
+    <li><a href="/HelpBar">Help Bar</a></li>
+    <li style="float:right"><form th:action="@{/logout}" method="post"><input type="submit" value="Log Out"/></form></li>
 </ul>
 
 
@@ -54,7 +40,110 @@
     <h2>Find Your Roomie Today!</h2>
 
 
+        <p th:text="${basicinforesults.headLine}" />
+        <br>
+
+        <div class="row">
+            <div class="column">
+                <p th:text="'Profession: ' + ${basicinforesults.profession}" />
+                <br>
+                <p th:text="'Social Media Handle: ' + ${basicinforesults.profession}" />
+                <br>
+                <p th:text="'Age: ' + ${basicinforesults.age}" />
+                <br>
+            </div>
+            <div class="column">
+
+                <p th:text="'Current City: ' + ${basicinforesults.currentCity}" />
+                <br>
+                <p th:text="'Language: ' + ${basicinforesults.language}" />
+                <br>
+
+            </div>
+        </div>
+        <p th:text="${basicinforesults.importantThing}" />
+        <br>
+    </div>
+
+
+    <h2>Click <a th:href="@{/HomeTour}">here</a> for [[${#httpServletRequest.remoteUser}]]'s Home Tour!</h2>
+<hr>
+    <h1>[[${#httpServletRequest.remoteUser}]]'s Preferences</h1>
+
+        <div class="row">
+            <div class="column">
+                <p th:text="'What Describes you: ' + ${results.whatDescribesYou}" />
+                <br>
+                <p th:text="'Do you prefer your roommate to be extroverted or introverted?: ' + ${results.extrovertedOrIntroverted}" />
+                <br>
+                <p th:text="'How often do you invite friends over?: ' + ${results.inviteFriendsOver}" />
+                <br>
+                <p th:text="'What are your cleaning habits?: ' + ${results.cleaningHabits}" />
+                <br>
+                <p th:text="'Do you smoke?: ' + ${results.doYouSmoke}" />
+                <br>
+                <p th:text="'Do you care if your roommate smokes?: ' + ${results.doesRoommateSmoke}" />
+                <br>
+                <p th:text="'Do you drink?: ' + ${results.doYouDrink}" />
+                <br>
+                <p th:text="'Do you care if your roommate drinks?: ' + ${results.doesRoommateDrink}" />
+                <br>
+
+            </div>
+            <div class="column">
+
+                <p th:text="'What is your sleep schedule like?: ' + ${results.sleepSchedule}" />
+                <br>
+                <p th:text="'What are your cooking habits like?: ' + ${results.cookingHabit}" />
+                <br>
+                <p th:text="'What genres of music do you listen to?: ' + ${results.musicTaste}" />
+                <br>
+                <p th:text="'Do you have pets?: ' + ${results.havePets}" />
+                <br>
+                <p th:text="'Do you work from home?: ' + ${results.workFromHome}" />
+                <br>
+                <p th:text="'What are your pet peeves?: ' + ${results.petPeeves}" />
+                <br>
+                <p th:text="'Are you looking for anything else specific in a roommate?: ' + ${results.whatAreYouLookingFor}" />
+
+
+            </div>
+        </div>
+
+<hr>
+<h1>[[${#httpServletRequest.remoteUser}]]'s Wall</h1>
+<h2>Post something to [[${#httpServletRequest.remoteUser}]]'s Wall</h2>
+<br>
+<br>
+<form action="#" th:action="@{/surveyResults}" th:object= "${wallpost}"  method="post">
+    <div class="user_form">
+        <textarea rows="4" cols="100%" name="comment"  th:field="*{wallPost}" placeholder="What are you thinking..."></textarea>
+    </div>
+
+    <div class="alignbutton">
+        <input type="submit" class="regbutton" id="postbutton" value="Post" align="center">
+    </div>
+</form>
+
+
+<br>
+<br>
+<h1>Most Recent Posts:</h1>
+<h2>Check it out!</h2>
+<br>
+
+
+
+<div class="rcorners">
+<tr th:each="post : ${posts}">
+    <td><div class="wallpost" th:text="${post.wallPost}" ></div></td>
+</tr>
+
+
 
 </div>
+<br>
+</div>
+
 </body>
 </html>
