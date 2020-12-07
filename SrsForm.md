@@ -151,7 +151,7 @@
    | **Origin:** Based on initial project specification   document, team members came up with this description during the first   meeting.|
    | **Version:** 1.0  |
    |**Date:** 09/23/2020| 
-    |**Priority:** 2 |
+   |**Priority:** 2 |
     
  |FR16: Route for user to pick matches by location|
  |---|
