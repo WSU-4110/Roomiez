@@ -71,7 +71,7 @@
   | **Origin:** Based on initial project specification   document, team members came up with this description during the first   meeting.|
   | **Version:** 1.0  |
   |**Date:** 09/23/2020| 
-    |**Priority:** 1 |
+ |**Priority:** 1 |
     
  |FR8: Create a chat box UI|
  |---|
@@ -127,7 +127,7 @@
  |---|
  |**Goal**: Once the user logs into their account, they will be routed to a page where they can update their profile information.|
  |**Stakeholders:** Customers|
- | **Description:**Users would be able to see who their potential matches are on the page. This route will host the functionality where users are able to find potential roommates based on various needs. The user can search by location, recommended, those that are online and those that are new to the website.   |
+ | **Description:** Users would be able to see who their potential matches are on the page. This route will host the functionality where users are able to find potential roommates based on various needs. The user can search by location, recommended, those that are online and those that are new to the website.   |
  | **Origin:** Based on initial project specification   document, team members came up with this description during the first   meeting.|
  | **Version:** 1.0  |
  |**Date:** 09/23/2020| 
@@ -137,7 +137,7 @@
   |---|
   |**Goal**: To be able to select other users according to those that are online.|
   |**Stakeholders:** Customers|
-  | **Description:*Users would be able to see who is online in order to match and message them. A limited number of the users online would be allowed on the screen and would be adjusted accordingly.   |
+  | **Description:** Users would be able to see who is online in order to match and message them. A limited number of the users online would be allowed on the screen and would be adjusted accordingly.   |
   | **Origin:** Based on initial project specification   document, team members came up with this description during the first   meeting.|
   | **Version:** 1.0  |
   |**Date:** 09/23/2020| 
@@ -147,7 +147,7 @@
    |---|
    |**Goal**: To be able to view other users that are recommended to the user|
    |**Stakeholders:** Customers|
-   | **Description:*Users would be able to see who their recommended matches are on the page. It would be arranged in the order of best match to least likely to be a match. The page would be adjusted as the user picks potential matches from the profiles.  |
+   | **Description:** Users would be able to see who their recommended matches are on the page. It would be arranged in the order of best match to least likely to be a match. The page would be adjusted as the user picks potential matches from the profiles.  |
    | **Origin:** Based on initial project specification   document, team members came up with this description during the first   meeting.|
    | **Version:** 1.0  |
    |**Date:** 09/23/2020| 
@@ -157,7 +157,7 @@
  |---|
  |**Goal**: To be able to select users that are in a specific radius to their location.|
  |**Stakeholders:** Customers|
- | **Description:*Users would be able to see who their potential matches within a specific radius of their location. It would be arranged in the order of closest to the user to furthest away from the user. The users will change depending on the radius that the user selects.  |
+ | **Description:** Users would be able to see who their potential matches within a specific radius of their location. It would be arranged in the order of closest to the user to furthest away from the user. The users will change depending on the radius that the user selects.  |
  | **Origin:** Based on initial project specification   document, team members came up with this description during the first   meeting.|
  | **Version:** 1.0  |
  |**Date:** 09/23/2020| 
@@ -168,7 +168,7 @@
  |---|
  |**Goal**: For users to view new members |
  |**Stakeholders:** Customers|
- | **Description:*Users would be able to see who is new to the application. It would be arranged in the order of most recent. A limited number of the new members would be allowed on the screen and would be adjusted accordingly as the users stay in the app longer.  |
+ | **Description:** Users would be able to see who is new to the application. It would be arranged in the order of most recent. A limited number of the new members would be allowed on the screen and would be adjusted accordingly as the users stay in the app longer.  |
  | **Origin:** Based on initial project specification   document, team members came up with this description during the first   meeting.|
  | **Version:** 1.0  |
  |**Date:** 09/23/2020| 
